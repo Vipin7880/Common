@@ -65,26 +65,16 @@
                     color: rgba($white, 0.7);
                     transition: all 0.3s;
                     position: relative;
-                    padding-left: 15px;
-                    /* Space for marker */
+                    padding-left: 0;
+                    /* Reset padding */
+                    text-decoration: none;
 
-                    &::before {
-                        content: '›';
-                        /* Simple marker */
-                        position: absolute;
-                        left: 0;
-                        color: $accent-color;
-                        opacity: 0.7;
-                        transition: all 0.3s;
-                    }
+                    /* Removed ::before marker as requested */
 
                     &:hover {
                         color: $accent-color;
-                        padding-left: 20px;
-
-                        &::before {
-                            opacity: 1;
-                        }
+                        padding-left: 5px;
+                        /* Slight movement on hover */
                     }
                 }
             }

@@ -25,6 +25,17 @@ body {
   background-color: #fff;
 }
 
+/* Fix for fixed header clipping content */
+main {
+  padding-top: 100px;
+}
+
+/* Home page has a hero section that handles the top itself */
+app-home {
+  display: block;
+  margin-top: -100px;
+}
+
 h1,
 h2,
 h3,

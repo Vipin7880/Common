@@ -73,6 +73,9 @@ header {
             gap: 30px;
 
             li {
+                list-style: none;
+                /* User requested removal of marker */
+
                 a {
                     color: $white;
                     font-family: 'Montserrat', sans-serif;
@@ -80,7 +83,10 @@ header {
                     font-size: 0.9rem;
                     text-transform: uppercase;
                     position: relative;
+                    text-decoration: none;
+                    /* Remove default underline */
 
+                    /* Custom Golden Underline */
                     &::after {
                         content: '';
                         position: absolute;
@@ -95,6 +101,11 @@ header {
                     &:hover::after,
                     &.active::after {
                         width: 100%;
+                    }
+
+                    &.active {
+                        color: $accent-color;
+                        /* Use color to indicate active instead of underline */
                     }
 
                     &.btn-gold {
