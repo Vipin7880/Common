@@ -132,7 +132,8 @@ header {
 
         // Increased breakpoint for tablet
         .mobile-toggle {
-            display: block;
+            display: block !important; // Override any bootstrap hidden classes
+            z-index: 1001;
         }
 
         nav {

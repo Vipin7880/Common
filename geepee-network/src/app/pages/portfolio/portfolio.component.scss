@@ -8,15 +8,32 @@
     gap: 10px;
 
     button {
+        background: transparent;
         color: $text-color;
-        border-color: $text-color;
-        margin: 0; // Removed margin as we use gap now
+        border: 1px solid #ddd;
+        padding: 8px 24px;
+        border-radius: 50px; // Pill shape
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 
-        &.active,
         &:hover {
-            background: $primary-color;
-            color: $white;
             border-color: $primary-color;
+            color: $primary-color;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        &.active {
+            background: linear-gradient(135deg, $primary-color 0%, lighten($primary-color, 10%) 100%);
+            color: $white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba($primary-color, 0.4);
+            transform: translateY(-1px);
         }
     }
 }
