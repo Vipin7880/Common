@@ -1,0 +1,78 @@
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold mb-3">Browse Internships</h1>
+        <p class="text-secondary lead">Find the perfect domain to kickstart your career. 100% Free to start.</p>
+    </div>
+
+    <div class="d-md-none text-center mb-4">
+        <button (click)="scrollToForm()" class="btn btn-outline-primary rounded-pill shadow-sm">
+            Need a Custom Internship Duration? <span class="fw-bold">Click Here!</span> <i class="bi bi-arrow-down ms-1"></i>
+        </button>
+    </div>
+
+    <ng-container *ngIf="domains$ | async as domains">
+        <!-- 15 Days Section -->
+        <!-- 15 Days Section -->
+        <div class="mb-5" *ngIf="false">
+            <div class="d-flex align-items-center mb-4">
+                <i class="bi bi-mortarboard-fill fs-3 text-secondary me-3"></i>
+                <h2 class="fw-bold mb-0">15 Days Internship <span class="text-danger">[Project Based]</span></h2>
+            </div>
+            <hr class="mb-5 text-secondary opacity-25"
+                style="width: 50px; border-width: 3px; opacity: 1 !important; border-color: #1e1e2d;">
+
+            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col" *ngFor="let domain of domains">
+                    <app-feature-card [title]="domain.title" [description]="domain.description" [icon]="domain.icon"
+                        [image]="domain.image" [tags]="domain.tags" [link]="'/internship/' + domain.id"
+                        [queryParams]="{duration: 15}" linkText="View Roadmap">
+                    </app-feature-card>
+                </div>
+            </div>
+        </div>
+
+        <!-- 30 Days Section -->
+        <div class="mb-5 pt-4">
+            <div class="d-flex align-items-center mb-4">
+                <i class="bi bi-mortarboard-fill fs-3 text-secondary me-3"></i>
+                <h2 class="fw-bold mb-0">30 Days Internship <span class="text-danger">[Project Based]</span></h2>
+            </div>
+            <hr class="mb-5 text-secondary opacity-25"
+                style="width: 50px; border-width: 3px; opacity: 1 !important; border-color: #1e1e2d;">
+
+            <!-- Carousel for 30 Days (Slick) -->
+            <ngx-slick-carousel class="carousel" [config]="slickConfig">
+                <div ngxSlickItem *ngFor="let domain of domains" class="slide p-2">
+                    <app-feature-card [title]="domain.title" [description]="domain.description" [icon]="domain.icon"
+                        [image]="domain.image" [tags]="domain.tags" [link]="'/internship/' + domain.id"
+                        [queryParams]="{duration: 30}" linkText="View Roadmap">
+                    </app-feature-card>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+
+        <!-- 60 Days Section -->
+        <div class="mb-5 pt-4">
+            <div class="d-flex align-items-center mb-4">
+                <i class="bi bi-mortarboard-fill fs-3 text-secondary me-3"></i>
+                <h2 class="fw-bold mb-0">60 Days Internship <span class="text-danger">[Project Based]</span></h2>
+            </div>
+            <hr class="mb-5 text-secondary opacity-25"
+                style="width: 50px; border-width: 3px; opacity: 1 !important; border-color: #1e1e2d;">
+
+            <!-- Carousel for 60 Days (Slick) -->
+            <ngx-slick-carousel class="carousel" [config]="slickConfig">
+                <div ngxSlickItem *ngFor="let domain of domains" class="slide p-2">
+                    <app-feature-card [title]="domain.title" [description]="domain.description" [icon]="domain.icon"
+                        [image]="domain.image" [tags]="domain.tags" [link]="'/internship/' + domain.id"
+                        [queryParams]="{duration: 60}" linkText="View Roadmap">
+                    </app-feature-card>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </ng-container>
+
+    <div id="custom-form" class="mt-5 pt-5 border-top">
+         <app-higher-duration-form class="d-block"></app-higher-duration-form>
+    </div>
+</div>

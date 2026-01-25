@@ -1,0 +1,59 @@
+<div class="container py-5" *ngIf="domain$ | async as domain">
+    <!-- Header -->
+    <div class="mb-5 text-center">
+        <div class="mb-3 d-inline-block p-3 rounded-circle bg-light text-primary border">
+            <i class="bi {{domain.icon}} display-5"></i>
+        </div>
+        <h1 class="display-4 fw-bold mb-3">{{domain.title}}</h1>
+        <p class="lead text-secondary mx-auto mb-4" style="max-width: 700px;">{{domain.description}}</p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+            <span class="badge bg-white text-dark border px-3 py-2 fw-normal" *ngFor="let tool of domain.tools">
+                <i class="bi bi-tools me-2 text-primary"></i>{{tool}}
+            </span>
+        </div>
+    </div>
+
+    <hr class="my-5 text-secondary opacity-25">
+
+    <div class="row g-5">
+        <!-- Roadmap (Left) -->
+        <div class="col-lg-5">
+            <h3 class="fw-bold mb-4">Internship Roadmap</h3>
+            <div class="accordion" id="roadmapAccordion">
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden"
+                    *ngFor="let step of domain.roadmap; let i = index">
+                    <h2 class="accordion-header" [id]="'heading' + i">
+                        <button class="accordion-button fw-bold bg-white text-dark shadow-none" type="button"
+                            [class.collapsed]="activeAccordionIndex !== i" (click)="toggleAccordion(i, $event)"
+                            aria-expanded="false" [attr.aria-controls]="'collapse' + i">
+                            <span class="badge bg-primary bg-opacity-10 text-primary me-3">{{step.phase}}</span>
+                            {{step.title}}
+                        </button>
+                    </h2>
+                    <div [id]="'collapse' + i" class="accordion-collapse collapse"
+                        [class.show]="activeAccordionIndex === i" [attr.aria-labelledby]="'heading' + i">
+                        <div class="accordion-body text-secondary bg-light">
+                            {{step.desc}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing & Form (Right) -->
+        <div class="col-lg-7">
+            <h3 class="fw-bold mb-4">Choose Your Path</h3>
+            <app-pricing-table class="mb-5 d-block"></app-pricing-table>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container py-5 text-center" *ngIf="!(domain$ | async)">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-3 text-secondary">Loading domain details...</p>
+</div>

@@ -1,0 +1,92 @@
+<section class="py-5 bg-light min-vh-100 d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bold mb-3">Verify Certificate</h1>
+                    <p class="text-secondary">Enter the Certificate ID issued to the intern to validate their
+                        credential.</p>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body p-4">
+                        <form (ngSubmit)="verifyCertificate()">
+                            <div class="mb-3">
+                                <label for="certId" class="form-label fw-bold">Certificate ID</label>
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bg-light border-end-0"><i
+                                            class="bi bi-shield-check text-primary"></i></span>
+                                    <input type="text" class="form-control bg-light border-start-0 ps-0" id="certId"
+                                        placeholder="e.g. IX-1001" [(ngModel)]="certId" name="certId" required>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-primary w-100 rounded-pill py-3 fw-bold text-white shadow-sm"
+                                [disabled]="isLoading">
+                                <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status"
+                                    aria-hidden="true"></span>
+                                <span *ngIf="!isLoading">Verify Now</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Result Area -->
+                <div *ngIf="searchPerformed && !isLoading">
+                    <!-- Valid Certificate -->
+                    <div *ngIf="isValid && certificateDetails"
+                        class="card border-0 shadow-lg animate__animated animate__fadeInUp bg-white print-ticket">
+                        <div class="card-body p-5 text-center position-relative overflow-hidden">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary opacity-10 d-print-none"
+                                style="z-index: 0;"></div>
+
+                            <div class="position-relative" style="z-index: 1;">
+                                <div class="mb-4">
+                                    <i class="bi bi-patch-check-fill text-success" style="font-size: 4rem;"></i>
+                                </div>
+                                <h2 class="fw-bold text-success mb-2">Verified Successfully!</h2>
+                                <p class="text-secondary mb-4">This certificate is valid and authentic.</p>
+
+                                <div class="border-top border-bottom py-4 my-4">
+                                    <h3 class="fw-bold mb-1">{{certificateDetails.name}}</h3>
+                                    <p class="text-primary fw-medium mb-3">{{certificateDetails.domain}} Intern</p>
+
+                                    <div class="row justify-content-center text-start mt-4">
+                                        <div class="col-6">
+                                            <p class="small text-secondary mb-1">Duration</p>
+                                            <p class="fw-bold">{{certificateDetails.startDate}} -
+                                                {{certificateDetails.endDate}}</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="small text-secondary mb-1">Certificate ID</p>
+                                            <p class="fw-bold">{{certificateDetails.id}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="card-footer bg-warning bg-opacity-10 text-warning text-center py-2 border-top-0">
+                            <small><i class="bi bi-exclamation-triangle-fill me-1"></i> This is a digitally verified
+                                record.</small>
+                        </div>
+                    </div>
+
+                    <!-- Invalid Certificate -->
+                    <div *ngIf="!isValid"
+                        class="alert alert-danger shadow-sm text-center animate__animated animate__shakeX" role="alert">
+                        <div class="mb-3"><i class="bi bi-exclamation-octagon-fill fs-1 text-danger"></i></div>
+                        <h4 class="alert-heading fw-bold">Invalid Certificate</h4>
+                        <p>The Certificate ID <strong>{{certId}}</strong> could not be found in our records.</p>
+                        <hr>
+                        <p class="mb-0 small">Please check the ID and try again. If you believe this is an error, please
+                            <a routerLink="/contact" class="alert-link">contact your mentor</a>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

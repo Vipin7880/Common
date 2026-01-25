@@ -1,0 +1,56 @@
+<footer class="bg-dark text-light py-5 mt-auto border-top border-secondary">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="fw-bold mb-3 text-white">
+                    <img src="assets/logo.png" alt="Logo" height="30" class="me-2">
+                    Subhro <span class="text-gradient">Tech</span>
+                </h5>
+                <p class="text-secondary">Empowering the next generation of tech leaders through hands-on internship
+                    experiences. Join us and launch your career today.</p>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="#" class="text-secondary hover-text-primary"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a href="#" class="text-secondary hover-text-primary"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="text-secondary hover-text-primary"><i class="bi bi-github fs-5"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3 text-white">Company</h6>
+                <ul class="list-unstyled text-secondary">
+                    <li class="mb-2"><a routerLink="/about"
+                            class="text-decoration-none text-secondary hover-text-white">About Us</a></li>
+                    <li class="mb-2"><a routerLink="/services"
+                            class="text-decoration-none text-secondary hover-text-white">Services</a></li>
+                    <li class="mb-2"><a routerLink="/domains"
+                            class="text-decoration-none text-secondary hover-text-white">Internships</a></li>
+                    <li class="mb-2"><a routerLink="/contact"
+                            class="text-decoration-none text-secondary hover-text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3 text-white">Legal</h6>
+                <ul class="list-unstyled text-secondary">
+                    <li class="mb-2"><a routerLink="/terms"
+                            class="text-decoration-none text-secondary hover-text-white">Terms & Conditions</a></li>
+                    <li class="mb-2"><a routerLink="/refunds"
+                            class="text-decoration-none text-secondary hover-text-white">Cancellation & Refunds</a>
+                    </li>
+                    <li class="mb-2"><a routerLink="/privacy"
+                            class="text-decoration-none text-secondary hover-text-white">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h6 class="fw-bold mb-3 text-white">Newsletter</h6>
+                <p class="text-secondary small">Subscribe to get the latest internship updates and tech news.</p>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control bg-dark border-secondary text-white"
+                        placeholder="Your email" aria-label="Your email" [(ngModel)]="email">
+                    <button class="btn btn-primary" type="button" (click)="subscribe()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-top border-secondary mt-4 pt-4 text-center text-secondary small">
+            <p class="mb-0">&copy; 2026 Subhro Tech. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

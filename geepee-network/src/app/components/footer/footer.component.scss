@@ -1,0 +1,141 @@
+@import '../../../styles.scss';
+
+.footer-section {
+    background-color: darken($primary-color, 8%);
+    color: $white;
+    padding: 60px 0 30px;
+    font-size: 0.9rem;
+
+    h4,
+    h5 {
+        color: $white;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: rgba($white, 0.7);
+        line-height: 1.6;
+    }
+
+    .footer-about {
+        .social-links {
+            margin-top: 20px;
+
+            a {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                background: rgba(255, 255, 255, 0.1);
+                color: $white;
+                text-align: center;
+                line-height: 35px;
+                border-radius: 50%;
+                margin-right: 10px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background: $accent-color;
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+
+    .footer-links {
+        ul {
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+                list-style: none;
+                /* Reset default */
+
+                a {
+                    color: rgba($white, 0.7);
+                    transition: all 0.3s;
+                    position: relative;
+                    padding-left: 15px;
+                    /* Space for marker */
+
+                    &::before {
+                        content: '›';
+                        /* Simple marker */
+                        position: absolute;
+                        left: 0;
+                        color: $accent-color;
+                        opacity: 0.7;
+                        transition: all 0.3s;
+                    }
+
+                    &:hover {
+                        color: $accent-color;
+                        padding-left: 20px;
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        p {
+            margin-bottom: 0;
+            font-size: 0.85rem;
+        }
+    }
+
+    .contact-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            color: rgba($white, 0.7);
+
+            i {
+                color: $accent-color;
+                margin-right: 10px;
+                margin-top: 5px;
+                width: 15px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        text-align: center; // Center everything on mobile for cleaner look
+
+        .footer-logo h4 {
+            justify-content: center;
+        }
+
+        .col-md-4,
+        .col-md-3,
+        .col-md-2 {
+            margin-bottom: 30px;
+        }
+
+        .footer-about .social-links {
+            justify-content: center;
+        }
+    }
+}

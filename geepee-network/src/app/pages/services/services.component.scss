@@ -1,0 +1,49 @@
+@import '../../../styles.scss';
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+
+    .service-card {
+        background: $white;
+        padding: 40px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: transform 0.3s;
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+            transform: translateY(-5px);
+            border-bottom-color: $accent-color;
+
+            .icon {
+                background: $primary-color;
+                color: $white;
+            }
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            background: lighten($primary-color, 65%);
+            color: $primary-color;
+            font-size: 1.8rem;
+            margin: 0 auto 25px;
+            transition: all 0.3s;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: lighten($text-color, 15%);
+            line-height: 1.6;
+        }
+    }
+}

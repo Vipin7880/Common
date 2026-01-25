@@ -1,0 +1,30 @@
+<section class="section-padding portfolio-page">
+    <div class="container">
+        <div class="section-title">
+            <h2>Featured Works</h2>
+            <p>A glimpse into our successful projects and campaigns.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filter text-center">
+            <button class="btn btn-outline" [class.active]="filter === 'all'" (click)="filter = 'all'">All</button>
+            <button class="btn btn-outline" [class.active]="filter === 'web'" (click)="filter = 'web'">Web Dev</button>
+            <button class="btn btn-outline" [class.active]="filter === 'marketing'"
+                (click)="filter = 'marketing'">Marketing</button>
+            <button class="btn btn-outline" [class.active]="filter === 'events'"
+                (click)="filter = 'events'">Events</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="portfolio-grid">
+            <div class="project-item" *ngFor="let project of filteredProjects">
+                <div class="project-img">
+                    <img [src]="project.image" [alt]="project.title">
+                    <div class="bottom-overlay">
+                        <h4>{{ project.title }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

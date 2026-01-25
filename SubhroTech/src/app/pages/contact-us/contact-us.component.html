@@ -1,0 +1,101 @@
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold mb-3">Get in Touch</h1>
+        <p class="text-secondary lead">Have a question or want to work with us? We'd love to hear from you.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Contact Info -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="card border-0 shadow-sm h-100 bg-primary text-white">
+                <div class="card-body p-4 p-lg-5">
+                    <h3 class="fw-bold mb-4">Contact Info</h3>
+
+                    <div class="d-flex mb-4 align-items-start">
+                        <i class="bi bi-geo-alt fs-4 me-3 opacity-75 text-white pt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">Address</h5>
+                            <p class="mb-0 opacity-75">HOLDING NO 564, PLOT NO 0432472,<br>WARD NO 43/95, BURNPUR,
+                                NABAGHANTI,<br>GOWALA PARA, ASANSOL,<br>Paschim Bardhaman, West Bengal, 713325</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4 align-items-center">
+                        <i class="bi bi-envelope fs-4 me-3 opacity-75 text-white"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">Email</h5>
+                            <p class="mb-0 opacity-75">contact@subhrotech.com</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4 align-items-center">
+                        <i class="bi bi-card-heading fs-4 me-3 opacity-75 text-white"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">GSTIN</h5>
+                            <p class="mb-0 opacity-75">19EFMPM7781H1ZM</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <h5 class="fw-bold mb-3">Follow Us</h5>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-white opacity-75 hover-opacity-100"><i
+                                    class="bi bi-linkedin fs-4"></i></a>
+                            <a href="#" class="text-white opacity-75 hover-opacity-100"><i
+                                    class="bi bi-twitter fs-4"></i></a>
+                            <a href="#" class="text-white opacity-75 hover-opacity-100"><i
+                                    class="bi bi-instagram fs-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="col-lg-7 ps-lg-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4 p-lg-5">
+                    <h3 class="fw-bold mb-4">Send us a message</h3>
+
+                    <div *ngIf="isSubmitted" class="alert alert-success shadow-sm animate__animated animate__fadeIn">
+                        <h5 class="alert-heading fw-bold"><i class="bi bi-check-circle-fill me-2"></i>Message Sent!</h5>
+                        <p class="mb-0">We will revert back to you within 3 business days.</p>
+                    </div>
+
+                    <form (ngSubmit)="submitForm()" *ngIf="!isSubmitted" #contactForm="ngForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control form-control-lg" id="name"
+                                    [(ngModel)]="formData.name" name="name" required placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" class="form-control form-control-lg" id="email"
+                                    [(ngModel)]="formData.email" name="email" required placeholder="Email">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control form-control-lg" id="subject"
+                                    [(ngModel)]="formData.subject" name="subject" required placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control form-control-lg" id="message" rows="5"
+                                    [(ngModel)]="formData.message" name="message" required
+                                    placeholder="How can we help?"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg px-5"
+                                    [disabled]="!contactForm.form.valid || isSubmitting">
+                                    <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2"></span>
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

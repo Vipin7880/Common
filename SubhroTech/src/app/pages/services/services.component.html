@@ -1,0 +1,26 @@
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold mb-3"><span class="text-gradient">Our Services</span></h1>
+        <p class="text-secondary lead mx-auto" style="max-width: 600px;">Helping businesses transform with cutting-edge
+            technology and digital strategies.</p>
+    </div>
+
+    <div class="row g-4 row-cols-1 row-cols-lg-3">
+        <div class="col" *ngFor="let service of services">
+            <div class="card h-100 border shadow-sm hover-lift transition-all">
+                <div class="card-body p-4 text-center">
+                    <div class="d-inline-block p-3 rounded-circle bg-primary bg-opacity-10 text-primary mb-4">
+                        <i class="bi {{service.icon}} fs-2"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">{{service.title}}</h3>
+                    <p class="text-secondary mb-4">{{service.desc}}</p>
+                    <ul class="list-unstyled text-start mb-0 d-inline-block">
+                        <li class="mb-2" *ngFor="let feature of service.features">
+                            <i class="bi bi-check2 text-primary me-2"></i>{{feature}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+@import '../../../styles.scss';
+
+.portfolio-filter {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    button {
+        color: $text-color;
+        border-color: $text-color;
+        margin: 0; // Removed margin as we use gap now
+
+        &.active,
+        &:hover {
+            background: $primary-color;
+            color: $white;
+            border-color: $primary-color;
+        }
+    }
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+
+    .project-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+
+        .project-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 0; // Removing bottom margin as title is inside
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.5s ease;
+            }
+
+            .bottom-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.6); // Dark semi-transparent background
+                padding: 15px 20px;
+                z-index: 2;
+                transition: background 0.3s;
+
+                h4 {
+                    color: $white;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin: 0;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        &:hover {
+            .project-img {
+                img {
+                    transform: scale(1.1); // Zoom effect on image
+                }
+
+                // Optional: Make overlay slightly darker on hover for contrast
+                .bottom-overlay {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+    }
+}

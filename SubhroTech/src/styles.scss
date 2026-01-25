@@ -1,0 +1,68 @@
+/* Google Fonts: Outfit */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* Slick Carousel SCSS */
+$slick-font-path: "~slick-carousel/slick/fonts/";
+$slick-loader-path: "~slick-carousel/slick/";
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
+/* Bootstrap Icons */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Variable Overrides (Premium Aesthetics) */
+$font-family-base: 'Outfit', sans-serif;
+$primary: #4f46e5;
+/* Indigo 600 - Modern Purple/Blue */
+$secondary: #64748b;
+/* Slate 500 */
+$success: #10b981;
+/* Emerald 500 */
+$info: #0ea5e9;
+/* Sky 500 */
+$warning: #f59e0b;
+/* Amber 500 */
+$danger: #ef4444;
+/* Red 500 */
+$light: #f8fafc;
+/* Slate 50 */
+$dark: #0f172a;
+/* Slate 900 */
+
+$body-bg: #f8fafc;
+$body-color: #334155;
+
+$enable-shadows: true;
+$enable-gradients: true;
+
+/* Bootstrap Import */
+@import "bootstrap/scss/bootstrap";
+
+/* Global Custom Styles */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-primary {
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.1), 0 2px 4px -1px rgba(79, 70, 229, 0.06);
+
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+    transform: translateY(-1px);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+  }
+}

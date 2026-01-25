@@ -1,0 +1,438 @@
+// Variables
+$navy: #002147;
+$gold: #D4AF37;
+
+// Navbar Styles
+.navbar {
+    transition: background 0.3s;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    padding: 15px 0;
+    z-index: 1060;
+    
+    &.scrolled {
+       background: $navy;
+       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .desktop-menu {
+        display: none; // Hidden by default (mobile)
+        
+        @media (min-width: 992px) {
+            display: flex;
+            gap: 30px;
+            
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: color 0.3s;
+                position: relative;
+
+                &:hover {
+                    color: $gold;
+                }
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: $gold;
+                    transition: width 0.3s;
+                }
+                
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 1px;
+}
+
+// Hamburger Button (Mobile Only)
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 1061;
+    padding: 0;
+    display: block;
+
+    @media (min-width: 992px) {
+        display: none; // Hide on desktop
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        margin-bottom: 6px;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        
+        &:nth-child(1) { top: 0; }
+        &:nth-child(2) { top: 9px; }
+        &:nth-child(3) { top: 18px; margin-bottom: 0; }
+    }
+
+    &.active {
+        span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 9px;
+        }
+    }
+}
+
+// Mobile Dropdown Menu
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $navy;
+    z-index: 1050; // Below hamburger/navbar
+    padding-top: 80px; // Clear the navbar
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    &.open {
+        transform: translateY(0);
+    }
+
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 15px 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: background 0.3s;
+
+            &:hover {
+                background: rgba(255,255,255,0.05);
+                color: $gold;
+                padding-left: 40px;
+            }
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+// Hero
+.hero-section {
+    background: url('../assets/images/hero.png') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(rgba(0,33,71,0.5), rgba(0,33,71,0.3)); // Navy overlay
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    
+    h1 {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+}
+
+.section-title {
+    color: $navy;
+    margin-bottom: 60px;
+    text-align: center;
+    
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .line {
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: $gold;
+        margin: 0 auto;
+    }
+}
+
+.about-section {
+    background: #fff;
+}
+
+.services-section {
+    background: #f8f9fa;
+}
+
+.service-card {
+    background: #fff;
+    border: none;
+    padding: 40px 30px;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        
+        .icon-box {
+            background: $gold;
+            color: #fff;
+            border-color: $gold;
+        }
+    }
+
+    .icon-box {
+        width: 80px;
+        height: 80px;
+        border: 2px solid $navy;
+        color: $navy;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        transition: all 0.3s;
+    }
+    
+    h3 {
+        color: $navy;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+}
+
+.stats-section {
+    background: $navy;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.contact-section {
+    background: #fff;
+    
+    .contact-info {
+        background: $navy;
+        color: #fff;
+        padding: 40px;
+        height: 100%;
+        
+        a { color: #fff; text-decoration: none; }
+    }
+    
+    .form-control {
+        border-radius: 0;
+        padding: 15px;
+        border: 1px solid #ddd;
+        &:focus {
+            border-color: $gold;
+            box-shadow: none;
+        }
+    }
+}
+
+footer {
+    background: darken($navy, 5%);
+    color: rgba(255,255,255,0.7);
+    padding: 40px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Dark Mode Styles */
+:host-context(body.dark-mode) {
+    .about-section, .services-section, #projects, .clients-section, .contact-section {
+        background-color: #1e1e1e !important;
+        color: #e0e0e0;
+    }
+    
+    .bg-white {
+        background-color: #1e1e1e !important;
+    }
+    
+    .service-card {
+        background-color: #2d2d2d;
+        h3 { color: #fff; }
+        p { color: #aaa !important; }
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    
+    .section-title h2 {
+        color: $gold;
+    }
+    
+    .slider {
+        &::before, &::after {
+            background: linear-gradient(to right, #1e1e1e 0%, rgba(30, 30, 30, 0) 100%);
+        }
+        
+        .slide img {
+             // Removed bg and box-shadow for "borderless" look
+             filter: grayscale(100%) brightness(0.9) drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+             opacity: 0.8;
+             
+             &:hover { 
+                 opacity: 1; 
+                 // Combined filters: grayscale 0, correct brightness, and enhanced drop-shadow
+                 filter: grayscale(0%) brightness(1) drop-shadow(0 8px 20px rgba(0,0,0,0.7));
+             }
+        }
+    }
+
+    .contact-info {
+        background-color: #000;
+    }
+}
+
+// Global body style needs to be in global styles or ::ng-deep if strictly necessary here 
+// But since we toggle class on body, we can just handle global bg color in global css or renderer.
+// For now, let's leave global body bg color to typical global.scss or assume it works 
+// because body isn't encapsulated. But for component styles:
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1062;
+    
+    &:hover {
+        background: rgba(255,255,255,0.1);
+        transform: rotate(15deg);
+    }
+    
+    i { font-size: 1.2rem; }
+}
+
+/* Clients Section (Carousel) */
+.clients-section {
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+    // box-shadow removed from here
+    z-index: 10;
+}
+
+.slider {
+    height: 140px; // Increased height to prevent shadow clipping
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    
+    &::before,
+    &::after {
+        background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 140px; // Match slider height
+        position: absolute;
+        width: 100px;
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    
+    &::before {
+        left: 0;
+        top: 0;
+    }
+    
+    .slide-track {
+        animation: scroll 30s linear infinite;
+        display: flex;
+        width: calc(220px * 12); // Slightly increased width calculation
+        padding-top: 20px; // Space for top shadow
+    }
+    
+    .slide {
+        height: 100px;
+        width: 220px; // Increased width for spacing
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px;
+            
+            // Removed card background/padding/radius specifically to remove "border" look
+            // Using drop-shadow filter for the shadow to contour the logo instead of a box
+            filter: grayscale(100%) drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                filter: grayscale(0%) drop-shadow(0 8px 20px rgba(0,0,0,0.2));
+                opacity: 1;
+                transform: translateY(-5px) scale(1.05);
+            }
+
+            // Mobile Sizing
+            @media (max-width: 768px) {
+                max-height: 90px;
+                // padding removed
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-220px * 6)); } // Match new width
+}

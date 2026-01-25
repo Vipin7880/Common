@@ -1,0 +1,91 @@
+@import '../../../styles.scss';
+
+.trusted-by-section {
+    padding: 60px 0;
+    background: $light-gray;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+
+    .subtitle {
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: lighten($text-color, 30%);
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+
+    .marquee {
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        height: 150px; // Increased to accommodate 100px logos
+        overflow-x: hidden;
+        overflow-y: hidden; // Prevent vertical scrollbars
+    }
+
+    .track {
+        position: absolute;
+        white-space: nowrap;
+        will-change: transform;
+        animation: scroll 40s linear infinite; // Slowed down slightly for better view
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: fit-content; // Ensure it takes full width of content
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    .logo-item {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 40px;
+        opacity: 0.7;
+        transition: all 0.3s;
+        cursor: default;
+
+        img {
+            height: 100px; // Increased per request
+            width: auto;
+            filter: grayscale(100%);
+            transition: all 0.3s;
+            // Remove any potential shadows that caused 'dark blur'
+            box-shadow: none;
+        }
+
+        // Desktop Hover Interactions
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                opacity: 1;
+
+                img {
+                    filter: grayscale(0%);
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        // Mobile / No-Hover Fallback
+        @media (hover: none),
+        (max-width: 900px) {
+            opacity: 1;
+
+            img {
+                filter: grayscale(0%);
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

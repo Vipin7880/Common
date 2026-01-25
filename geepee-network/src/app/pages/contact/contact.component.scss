@@ -1,0 +1,112 @@
+@import '../../../styles.scss';
+
+.contact-wrapper {
+    display: flex;
+    background: $white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+    .contact-info {
+        flex: 1;
+        background: $primary-color;
+        color: $white;
+        padding: 50px;
+
+        h3 {
+            color: $white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: rgba($white, 0.8);
+            margin-bottom: 40px;
+        }
+
+        .info-list {
+            li {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 25px;
+
+                i {
+                    color: $accent-color;
+                    font-size: 1.2rem;
+                    margin-top: 5px;
+                    margin-right: 20px;
+                }
+
+                strong {
+                    display: block;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+
+                span {
+                    color: rgba($white, 0.8);
+                }
+            }
+        }
+
+        .social-links {
+            margin-top: 50px;
+
+            a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background: rgba($white, 0.1);
+                color: $white;
+                border-radius: 50%;
+                margin-right: 15px;
+
+                &:hover {
+                    background: $accent-color;
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        flex: 1.5;
+        padding: 50px;
+
+        .form-group {
+            margin-bottom: 25px;
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                color: $primary-color;
+                font-weight: 600;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background: $light-bg;
+                font-family: inherit;
+
+                &:focus {
+                    outline: none;
+                    border-color: $primary-color;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        .contact-info,
+        .contact-form {
+            padding: 30px;
+        }
+    }
+}

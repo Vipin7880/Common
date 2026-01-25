@@ -1,0 +1,199 @@
+<!-- Hero Section -->
+<section
+    class="hero-section position-relative overflow-hidden py-5 bg-dark text-white text-center d-flex align-items-center"
+    style="min-height: 80vh;">
+    <div class="container position-relative z-index-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <h1 class="display-3 fw-bold mb-4 lh-sm">Launch Your Career with <br><span class="text-gradient">Real
+                        Experience</span></h1>
+                <p class="lead text-secondary mb-5 mx-auto" style="max-width: 600px;">Join 500+ interns gaining hands-on
+                    experience in Web Dev, AI, and Data Science. Build your portfolio and get verified.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a routerLink="/domains"
+                        class="btn btn-primary btn-lg rounded-pill fw-bold px-5 py-3 shadow-lg">Explore
+                        Internships</a>
+                    <a routerLink="/verify" class="btn btn-outline-primary btn-lg rounded-pill px-5 py-3 fw-bold">Verify
+                        Certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Decorative background elements could go here -->
+</section>
+
+<!-- Stats Section -->
+<section class="py-5 bg-white border-bottom">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <h2 class="display-4 fw-bold text-primary mb-0" [appCountUp]="107" [duration]="2000">0+</h2>
+                <p class="text-secondary mb-0">Active Interns</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="display-4 fw-bold text-primary mb-0" [appCountUp]="23" [duration]="2500">0+</h2>
+                <p class="text-secondary mb-0">Partner Companies</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="display-4 fw-bold text-primary mb-0" [appCountUp]="231" [duration]="3000">0+</h2>
+                <p class="text-secondary mb-0">Projects Completed</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Section -->
+<section class="py-5 py-lg-6 bg-white overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Text Content -->
+            <div class="col-lg-6">
+                <div class="pe-lg-5">
+                    <span class="d-inline-block py-2 px-3 rounded-pill bg-primary bg-opacity-10 text-primary fw-bold text-uppercase small mb-3" style="letter-spacing: 1px;">Why Choose Us?</span>
+                    <h2 class="display-4 fw-bold mb-4 text-dark lh-base">Building Careers, <br> <span class="text-primary">One Intern at a Time.</span></h2>
+                    <p class="lead text-secondary mb-5" style="font-weight: 400;">We go beyond the basics. Join a community that bridges the gap between academic theory and the real-world demands of the tech industry.</p>
+                    
+                    <div class="d-flex flex-column gap-4">
+                        <!-- Feature 1 -->
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center mt-1">
+                                <i class="bi bi-patch-check-fill fs-4"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h5 class="fw-bold mb-2">Industry-Recognized Certificates</h5>
+                                <p class="text-muted mb-0">Gain credentials that matter. Our certificates are verifiable and respected by top recruiters.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center mt-1">
+                                <i class="bi bi-laptop-fill fs-4"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h5 class="fw-bold mb-2">Hands-on Project Experience</h5>
+                                <p class="text-muted mb-0">Build your portfolio with live projects. Solve real problems, don't just watch tutorials.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center mt-1">
+                                <i class="bi bi-people-fill fs-4"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h5 class="fw-bold mb-2">Expert Mentorship & Community</h5>
+                                <p class="text-muted mb-0">Learn from the best. Get guidance from industry experts and network with peers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <a routerLink="/about" class="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-lg zoom-hover">Learn More About Us <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Content -->
+            <div class="col-lg-6">
+                <div class="position-relative ps-lg-5 text-center text-lg-start mt-5 mt-lg-0">
+                    <!-- Dot Pattern for Texture - Top Right -->
+                    <div class="position-absolute top-0 end-0 translate-middle-y z-index-0 d-none d-lg-block" style="right: -40px; margin-top: -30px;">
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <circle cx="2" cy="2" r="2" class="text-primary opacity-25" fill="currentColor"/>
+                            </pattern>
+                            <rect width="200" height="200" fill="url(#dotPattern)"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Main Image -->
+                    <img src="assets/images/trust-building-v2.png" 
+                         alt="Trusted Community" 
+                         class="img-fluid rounded-4 shadow-xl position-relative z-index-1 w-100 border border-5 border-white">
+                         
+                    <!-- Floating Badge/Card decoration - Bottom Left -->
+                    <div class="position-absolute bottom-0  mb-4 ms-4 z-index-2 d-none d-md-block">
+                        <div class="bg-white p-3 rounded-4 shadow-lg border border-light animate-float">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar-group d-flex">
+                                    <div class="rounded-circle bg-gray-200 border border-2 border-white d-flex align-items-center justify-content-center fw-bold text-secondary small" style="width: 38px; height: 38px;">AB</div>
+                                    <div class="rounded-circle bg-gray-300 border border-2 border-white ms-n2 d-flex align-items-center justify-content-center fw-bold text-secondary small" style="width: 38px; height: 38px;">CD</div>
+                                    <div class="rounded-circle bg-gray-400 border border-2 border-white ms-n2 d-flex align-items-center justify-content-center fw-bold text-secondary small" style="width: 38px; height: 38px;">EF</div>
+                                    <div class="rounded-circle bg-primary text-white border border-2 border-white ms-n2 d-flex align-items-center justify-content-center small fw-bold" style="width: 38px; height: 38px;">2k+</div>
+                                </div>
+                                <div class="border-start ps-3">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <i class="bi bi-star-fill text-warning small me-1"></i>
+                                        <span class="fw-bold text-dark small">4.9/5</span>
+                                    </div>
+                                    <p class="text-secondary opacity-75 small mb-0 lh-1">Student Ratings</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it Works (Timeline) -->
+<section class="py-5 bg-light">
+    <div class="container py-lg-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">How It Works</h2>
+            <p class="text-secondary">Your journey from student to professional in 3 simple steps.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-4 text-center">
+                    <!-- Step 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 position-relative">
+                            <div class="position-absolute top-0 start-50 translate-middle badge rounded-circle bg-primary fs-4 d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;">1</div>
+                            <div class="card-body mt-3">
+                                <div class="mb-4 text-primary"><i class="bi bi-code-square fs-1"></i></div>
+                                <h5 class="fw-bold mb-3">Choose Your Domain</h5>
+                                <p class="text-secondary">Select an internship track (Web Dev, AI, etc.) and start
+                                    accessing tasks immediately. No signup required.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 position-relative">
+                            <div class="position-absolute top-0 start-50 translate-middle badge rounded-circle bg-primary fs-4 d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;">2</div>
+                            <div class="card-body mt-3">
+                                <div class="mb-4 text-primary"><i class="bi bi-kanban fs-1"></i></div>
+                                <h5 class="fw-bold mb-3">Complete Tasks</h5>
+                                <p class="text-secondary">Work on real-world projects. Submit your work via GitHub and
+                                    build a solid portfolio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 position-relative">
+                            <div class="position-absolute top-0 start-50 translate-middle badge rounded-circle bg-success fs-4 d-flex align-items-center justify-content-center"
+                                style="width: 40px; height: 40px;">3</div>
+                            <div class="card-body mt-3">
+                                <div class="mb-4 text-success"><i class="bi bi-award fs-1"></i></div>
+                                <h5 class="fw-bold mb-3">Get Certified</h5>
+                                <p class="text-secondary">Verify your work and receive a recognized digital certificate
+                                    and optional project report.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a routerLink="/domains" class="btn btn-primary rounded-pill px-5">Start Your Journey <i
+                    class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</section>

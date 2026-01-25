@@ -1,0 +1,168 @@
+/* Google Fonts: Outfit */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* Bootstrap Icons */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Variable Overrides (Premium Aesthetics - Logo Theme) */
+$font-family-base: 'Outfit', sans-serif;
+$primary: #0ea5e9;
+/* Sky 500 - Logo Blue */
+$secondary: #64748b;
+/* Slate 500 */
+$success: #84cc16;
+/* Lime 500 - Logo Green */
+$info: #06b6d4;
+/* Cyan 500 */
+$warning: #f59e0b;
+/* Amber 500 */
+$danger: #ef4444;
+/* Red 500 */
+$light: #f8fafc;
+/* Slate 50 */
+$dark: #0f172a;
+/* Slate 900 */
+
+$body-bg: #f8fafc;
+$body-color: #334155;
+
+$enable-shadows: true;
+$enable-gradients: true;
+
+/* Bootstrap Import */
+@import "bootstrap/scss/bootstrap";
+
+/* Text Gradient Utility */
+.text-gradient {
+    background: linear-gradient(135deg, #84cc16 0%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+/* Global Custom Styles */
+body {
+    font-family: $font-family-base;
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-primary {
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.1), 0 2px 4px -1px rgba(79, 70, 229, 0.06);
+
+    &:hover {
+        box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+        transform: translateY(-1px);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+/* Enhanced Card Styles */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Slight border for separation */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    /* Very subtle base shadow */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: rgba(79, 70, 229, 0.1);
+        /* Slight primary tint on hover */
+    }
+}
+
+/* Gradient Button to match Logo */
+.btn-gradient {
+    background: linear-gradient(135deg, #84cc16 0%, #0ea5e9 100%);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &:hover {
+        color: white;
+        box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.4);
+        transform: translateY(-2px);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0ea5e9 0%, #84cc16 100%);
+        z-index: -1;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.bg-light {
+    background-color: #f8fafc !important;
+}
+
+.btn-outline-gradient {
+    background: white;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #84cc16 0%, #0ea5e9 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    color: #0ea5e9;
+    font-weight: bold;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.3);
+        /* Make it look like filled gradient on hover */
+        background: linear-gradient(135deg, #0ea5e9 0%, #84cc16 100%);
+        border-color: transparent;
+        color: white;
+    }
+}
+
+.btn-outline-gradient {
+    background: white;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #84cc16 0%, #0ea5e9 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    color: #0ea5e9;
+    font-weight: bold;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.3);
+        /* Make it look like filled gradient on hover */
+        background: linear-gradient(135deg, #0ea5e9 0%, #84cc16 100%);
+        border-color: transparent;
+        color: white;
+    }
+}
+
+// Selection Rings for Pricing
+.ring-primary {
+    border: 2px solid $primary !important;
+    transform: translateY(-5px);
+}
+
+.ring-warning {
+    border: 2px solid $warning !important;
+    transform: translateY(-5px);
+}

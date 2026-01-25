@@ -1,0 +1,48 @@
+@import '../../../styles.scss';
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+
+    .about-image {
+        img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .about-text {
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .mission-box {
+            background: $light-bg;
+            padding: 20px;
+            border-left: 4px solid $accent-color;
+            margin-top: 20px;
+
+            h4 {
+                margin-bottom: 10px;
+                color: $primary-color;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,9 @@
+.hover-text-primary:hover {
+    color: var(--bs-primary) !important;
+    transition: color 0.2s ease;
+}
+
+.hover-text-white:hover {
+    color: #fff !important;
+    transition: color 0.2s ease;
+}

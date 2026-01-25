@@ -1,0 +1,43 @@
+<div class="card border-0 shadow-sm bg-light rounded-4">
+  <div class="card-body p-4 p-md-5">
+    <div class="text-center mb-4">
+      <h3 class="fw-bold text-primary">Need a Longer Internship?</h3>
+      <p class="text-secondary">If you are looking for an internship duration of more than 60 days, please let us know.</p>
+    </div>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label small fw-bold text-muted">Full Name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control border-0 bg-white py-3 shadow-sm" [class.is-invalid]="errors['name']" [(ngModel)]="name" name="name" placeholder="Amit Sharma">
+          <div class="invalid-feedback" *ngIf="errors['name']">{{ errors['name'] }}</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label small fw-bold text-muted">Email Address <span class="text-danger">*</span></label>
+          <input type="email" class="form-control border-0 bg-white py-3 shadow-sm" [class.is-invalid]="errors['email']" [(ngModel)]="email" name="email" placeholder="amit.sharma@example.com">
+          <div class="invalid-feedback" *ngIf="errors['email']">{{ errors['email'] }}</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label small fw-bold text-muted">Phone Number <span class="text-danger">*</span></label>
+          <input type="tel" class="form-control border-0 bg-white py-3 shadow-sm" [class.is-invalid]="errors['phone']" [(ngModel)]="phone" name="phone" placeholder="+91 98765 43210">
+          <div class="invalid-feedback" *ngIf="errors['phone']">{{ errors['phone'] }}</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label small fw-bold text-muted">Desired Duration (Days) <span class="text-danger">*</span></label>
+          <input type="number" class="form-control border-0 bg-white py-3 shadow-sm" [class.is-invalid]="errors['duration']" [(ngModel)]="duration" name="duration" placeholder="e.g. 90" min="61">
+          <div class="invalid-feedback" *ngIf="errors['duration']">{{ errors['duration'] }}</div>
+        </div>
+        <div class="col-12">
+          <label class="form-label small fw-bold text-muted">Message (Optional)</label>
+          <textarea class="form-control border-0 bg-white py-3 shadow-sm" rows="3" [(ngModel)]="message" name="message" placeholder="Tell us more about your requirements..."></textarea>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <button type="submit" class="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-lg" [disabled]="isSubmitting">
+            <span *ngIf="!isSubmitting">Submit Enquiry <i class="bi bi-send ms-2"></i></span>
+            <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
