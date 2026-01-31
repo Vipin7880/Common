@@ -1,0 +1,309 @@
+:root {
+    --gold-primary: #d4af37;
+    --gold-dark: #aa8c2c;
+    --gold-light: #f3e5ab;
+    --text-dark: #1a1a1a;
+    --text-grey: #555555;
+    --white: #ffffff;
+}
+
+body {
+    background: #222; /* Dark background to pop the cert onscreen */
+    margin: 0;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container - Fixed Aspect Ratio 3:2 (1200x800 logic) */
+.certificate-container {
+    width: 1200px;
+    height: 800px;
+    background: var(--white);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    color: var(--text-dark);
+}
+
+/* Decorative Gold Frame */
+.certificate-frame {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px solid var(--gold-primary);
+    background-color: var(--white); /* Ensure white base */
+    background-image: url('bg_pattern.png'); /* Luxury Pattern */
+    background-size: 300px; /* Adjust scale of pattern */
+    background-repeat: repeat;
+    /* Blend mode to make pattern subtle */
+    background-blend-mode: multiply;
+    /* Opacity hint via mask or lighter image? 
+       CSS filter on image isn't direct on background-image. 
+       Better to use a pseudo-element if we need opacity, but simple approach:
+       let's assume the image itself is light enough, or add a white overlay.
+    */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+/* Background Overlay to soften the pattern for better contrast */
+.certificate-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85); /* 85% white overlay */
+    z-index: 0;
+}
+
+/* Inner Gold Border (Double border effect) - Moved to ::after or separate div? 
+   We used ::before for border previously. Now ::before is overlay.
+   Let's move 'Inner Gold Border' to a child div or pseudo on content.
+*/
+.frame-border-inner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid var(--gold-light);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Corner Ornaments */
+.certificate-frame::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 4px double var(--gold-primary);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.certificate-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 40px 80px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* HEADER */
+.cert-header {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cert-id {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px; /* Increased Size */
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-dark);
+    letter-spacing: 1px;
+    background: rgba(255,255,255,0.9);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.logo {
+    height: 80px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.title {
+    font-family: 'Cinzel', serif; /* Premium classic font */
+    font-size: 52px;
+    font-weight: 700;
+    color: #111; /* Solid dark specifically requested */
+    margin: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    /* Optional: very subtle gold text shadow instead of gradient fill */
+    text-shadow: 2px 2px 0px rgba(212, 175, 55, 0.2);
+}
+
+.subtitle {
+    font-size: 18px;
+    color: var(--text-grey);
+    margin-top: 5px;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+/* BODY */
+.cert-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Dynamic Data - Name */
+.recipient-name {
+    font-family: 'Great Vibes', cursive; /* Handwriting style */
+    font-size: 48px; /* Further reduced to 48px per user request */
+    color: var(--gold-dark);
+    margin: 0 0 10px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-transform: capitalize; /* Force Title Case to look better and save space */
+}
+
+.college-info {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.from-text {
+    color: var(--text-grey);
+    font-style: italic;
+    margin-right: 8px;
+}
+
+/* Dynamic Data - Other Fields */
+.dynamic-data-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #000;
+    font-style: italic;
+}
+
+.college-name {
+    /* Inherits dynamic-data-text */
+    font-size: 22px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-grey);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.course-highlight {
+    /* Inherits dynamic-data-text */
+    color: var(--gold-dark);
+    font-size: 24px;
+}
+
+/* FOOTER */
+.cert-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align bottom of content */
+    margin-top: 40px;
+    padding: 0 60px; /* More padding */
+}
+
+.footer-item {
+    text-align: center;
+    width: 240px; /* Fixed width for equal spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure content sits at bottom */
+    min-height: 80px;
+}
+
+.date-label, .sig-title {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 8px; /* Only top spacing */
+    margin-bottom: 0; /* Clear bottom spacing */
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.date-value {
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--text-dark); /* Match sig line */
+    display: block;
+    width: 100%;
+    /* Ensure font matches the placeholder for identical height */
+    font-family: 'Playfair Display', serif; 
+    font-weight: 700;
+    font-style: italic;
+    color: #000;
+}
+
+/* User Alignment Fix: Transparent text placeholder */
+/* User Alignment Fix: Transparent text placeholder */
+/* Digital Signature Style */
+.digital-signature {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid var(--text-dark);
+    
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text-dark);
+    padding-bottom: 0px; /* Adjust as needed */
+    line-height: 1.2;
+}
+
+/* Removed separate sig-line to prevent alignment mismatch */
+
+/* PRINT STYLES */
+@media print {
+    @page {
+        size: landscape;
+        margin: 0; /* Browser handles printable margins */
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: none;
+        display: block; /* Remove flex, let Puppeteer handle page placement */
+    }
+
+    .certificate-container {
+        box-shadow: none;
+        position: relative;
+        /* Keep original dimensions, let PDF scaler handle the fit */
+        width: 1200px;
+        height: 800px;
+        margin: 0 auto; /* Center horizontally if scale allows space */
+        
+        box-sizing: border-box;
+        left: auto;
+        top: auto;
+    }
+
+    .certificate-frame {
+        height: 95%;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
