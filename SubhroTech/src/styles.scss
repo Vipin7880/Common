@@ -12,14 +12,14 @@ $slick-loader-path: "~slick-carousel/slick/";
 
 /* Variable Overrides (Premium Aesthetics) */
 $font-family-base: 'Outfit', sans-serif;
-$primary: #4f46e5;
-/* Indigo 600 - Modern Purple/Blue */
+$primary: #4f46e5 ;
+/* Sky 500 - Logo Blue */
 $secondary: #64748b;
 /* Slate 500 */
 $success: #10b981;
 /* Emerald 500 */
-$info: #0ea5e9;
-/* Sky 500 */
+$info: #4f46e5 ;
+/* Cyan 500 */
 $warning: #f59e0b;
 /* Amber 500 */
 $danger: #ef4444;
@@ -48,10 +48,14 @@ body {
 }
 
 .btn-primary {
-  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.1), 0 2px 4px -1px rgba(79, 70, 229, 0.06);
+  background-color: $primary !important;
+  border-color: $primary !important;
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.1), 0 2px 4px -1px rgba(14, 165, 233, 0.06);
 
   &:hover {
-    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+    background-color: darken(#4f46e5 , 5%) !important;
+    border-color: darken(#4f46e5 , 5%) !important;
+    box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.2), 0 4px 6px -2px rgba(14, 165, 233, 0.1);
     transform: translateY(-1px);
     transition: all 0.2s ease-in-out;
   }
@@ -65,4 +69,18 @@ body {
   &:hover {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
   }
+}
+
+/* Global Subtle Focus */
+input:focus, 
+textarea:focus, 
+select:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1) !important;
+    border-color: rgba(79, 70, 229, 0.3) !important;
+}
+
+.form-control:focus {
+    background-color: #fff;
 }

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  razorpayKey: 'rzp_live_RtQyfgpNVZT9ww'
+  razorpayKey: 'rzp_live_RtQyfgpNVZT9ww',
+  apiBaseUrl: 'assets/api'
 };
 
 /*

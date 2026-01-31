@@ -1,0 +1,112 @@
+@import "../../../styles.scss";
+
+.checkout-wrapper {
+    background-color: #f8fafc;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    height: 100%; /* Ensure cards fill height in flex columns */
+    
+    &.rounded-3 {
+        border-radius: 0.75rem !important;
+    }
+}
+
+.low-radius {
+    border-radius: 4px !important;
+}
+
+.object-fit-cover {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-wrapper {
+    min-height: 250px;
+    height: 100%;
+    
+    @media (min-width: 992px) {
+        max-height: 364px; /* Reduced to 300px as requested */
+        overflow: hidden;
+    }
+}
+
+.ratio-4x3 {
+    --bs-aspect-ratio: 75%;
+}
+
+/* Accordion Button Styling */
+.btn-white {
+    background: #fff;
+    border: none;
+    color: #334155;
+    transition: all 0.2s ease;
+    
+    &:hover, &:focus {
+        background: #f1f5f9;
+        color: #4f46e5;
+    }
+    
+    &[aria-expanded="true"] {
+        .bi-chevron-down {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.bi-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.sticky-top {
+    z-index: 1000;
+}
+
+/* Mobile specific tweaks */
+@media (max-width: 991.98px) {
+    .checkout-wrapper {
+        padding-top: 1rem !important;
+    }
+    
+    .order-1 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .sticky-top {
+        top: 2rem;
+    }
+    
+    .row.g-4 {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: flex-start !important;
+        
+        .col-lg-8 {
+            flex: 0 0 66.666667% !important;
+            max-width: 66.666667% !important;
+        }
+        
+        .col-lg-4 {
+            flex: 0 0 33.333333% !important;
+            max-width: 33.333333% !important;
+        }
+    }
+}
+
+/* Animation for the discount section */
+.animate__fadeIn {
+    animation-duration: 0.5s;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through !important;
+    color: #94a3b8 !important;
+    opacity: 0.7;
+    font-size: 0.9em;
+}

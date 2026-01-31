@@ -25,6 +25,7 @@ import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { HigherDurationFormComponent } from './shared/higher-duration-form/higher-duration-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     TermsComponent,
     RefundsComponent,
     PrivacyComponent,
-    HigherDurationFormComponent
+    HigherDurationFormComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

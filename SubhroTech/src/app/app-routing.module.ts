@@ -10,6 +10,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { RefundsComponent } from './pages/refunds/refunds.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactUsComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'refunds', component: RefundsComponent },
+  { path: 'checkout', component: CheckoutComponent },
   { path: 'privacy', component: PrivacyComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

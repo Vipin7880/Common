@@ -2,6 +2,8 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { RazorpayService } from '../../core/services/razorpay.service';
+import { CheckoutService, CheckoutDetails } from '../../core/services/checkout.service';
+import { InternshipService } from '../../core/services/internship.service';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -14,20 +16,13 @@ export class PricingTableComponent implements OnInit {
   duration: number = 15; // Default duration
   domainId: string = '';
 
-  // User Details
-  customerName: string = '';
-  customerEmail: string = '';
-  customerPhone: string = '';
-
-  showPaymentModal: boolean = false;
-  showSuccessModal: boolean = false;
-  redirectSeconds: number = 10;
-  private redirectInterval: any;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private razorpayService: RazorpayService,
+    private checkoutService: CheckoutService,
+    private internshipService: InternshipService,
     private http: HttpClient,
     private ngZone: NgZone
   ) { }
@@ -58,12 +53,8 @@ export class PricingTableComponent implements OnInit {
     return this.selectedPlan !== 'phase1';
   }
 
-  openModal() {
-    this.showPaymentModal = true;
-  }
-
   closeModal() {
-    this.showPaymentModal = false;
+    // No longer needed
   }
 
   get phase2Price(): number {
@@ -75,92 +66,37 @@ export class PricingTableComponent implements OnInit {
   }
 
   buyPlan() {
-    // Validation
-    if (!this.customerName || !this.customerEmail || !this.customerPhone) {
-      alert('Please fill in your Name, Email, and Phone Number before proceeding.');
-      return;
-    }
+    // Get Domain Details to store in CheckoutService
+    this.internshipService.getDomainById(this.domainId).subscribe(domain => {
+      if (domain) {
+        const checkoutData: CheckoutDetails = {
+          customerName: '',   // Will be captured on checkout page
+          customerEmail: '',
+          customerPhone: '',
+          domainId: this.domainId,
+          domainTitle: domain.title,
+          domainCategory: domain.tags && domain.tags.length > 0 ? domain.tags[0] : 'Internship',
+          domainDescription: domain.description,
+          domainImage: domain.image || 'assets/domain-images/web-dev.png',
+          domainSyllabus: domain.roadmap ? domain.roadmap.map(r => r.title) : [],
+          planName: this.selectedPlan === 'phase2' ? 'Phase 2 (Certifications)' : 'Phase 3 (Academic+)',
+          duration: this.duration,
+          originalPrice: this.selectedPlan === 'phase2' ? this.phase2Price : this.phase3Price,
+          scratchPrice: this.selectedPlan === 'phase2' ? (this.duration === 60 ? 1499 : 899) : (this.duration === 60 ? 1899 : 1499)
+        };
 
-    let amount = 0;
-    let planName = '';
-
-    if (this.selectedPlan === 'phase2') {
-      amount = this.phase2Price;
-      planName = 'Phase 2 (Certifications)';
-    } else if (this.selectedPlan === 'phase3') {
-      amount = this.phase3Price;
-      planName = 'Phase 3 (Academic+)';
-    } else {
-      return;
-    }
-
-
-
-    const options = {
-      key: environment.razorpayKey, // Securely loaded from environment
-      amount: amount * 100, // Amount in paise
-      currency: 'INR',
-      name: 'Subhro Tech',
-      description: `${planName} - ${this.duration} Days - ${this.domainId}`,
-      image: 'assets/logo.png', // Optional
-      handler: (response: any) => {
+        this.checkoutService.setCheckoutData(checkoutData);
         this.ngZone.run(() => {
-          console.log(response);
-          this.savePayment(response, 'Success', amount, planName);
-
-          // Close Input Modal and Show Success Modal
-          this.showPaymentModal = false;
-          this.showSuccessModal = true;
-
-          // Start Redirect Timer
-          this.redirectInterval = setInterval(() => {
-            this.redirectSeconds--;
-            if (this.redirectSeconds <= 0) {
-              clearInterval(this.redirectInterval);
-              this.router.navigate(['/']);
-            }
-          }, 1000);
+          this.router.navigate(['/checkout']);
         });
-      },
-      prefill: {
-        name: this.customerName,
-        email: this.customerEmail,
-        contact: this.customerPhone
-      },
-      theme: {
-        color: '#3399cc'
-      },
-      modal: {
-        ondismiss: () => {
-          this.ngZone.run(() => {
-            this.savePayment({ payment_id: 'Cancelled' }, 'Failed/Cancelled', amount, planName);
-          });
-        }
       }
-    };
-
-    this.razorpayService.initiatePayment(options);
-  }
-
-  savePayment(response: any, status: string, amount: number, planName: string) {
-    const paymentData = {
-      payment_id: response.razorpay_payment_id || response.payment_id || 'N/A',
-      status: status,
-      amount: amount,
-      currency: 'INR',
-      plan_name: planName,
-      duration: this.duration,
-      domain: this.domainId,
-      name: this.customerName,
-      email: this.customerEmail,
-      phone: this.customerPhone,
-      notes: response
-    };
-
-    // PHP Backend
-    this.http.post('assets/api/save_payment.php', paymentData).subscribe({
-      next: (res) => console.log('Payment saved to backend', res),
-      error: (err) => console.error('Failed to save payment', err)
     });
   }
+
+  openModal() {
+    // Now just calls buyPlan directly as per new requirement
+    this.buyPlan();
+  }
+
+  // buyPlan and openModal are already handled below in the file
 }

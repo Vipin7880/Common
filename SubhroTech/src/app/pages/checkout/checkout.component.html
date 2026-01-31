@@ -1,0 +1,169 @@
+<div class="checkout-wrapper py-5 bg-light min-vh-100" *ngIf="checkoutData">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Left Column on Desktop / Top on Mobile: Internship Details -->
+            <div class="col-lg-8 d-flex flex-column">
+                <!-- Mobile Only: Accordion Header (Visible at top on mobile) -->
+                <div class="d-lg-none mb-3">
+                    <button class="btn btn-white w-100 shadow-sm rounded-3 py-3 d-flex justify-content-between align-items-center" 
+                            type="button" data-bs-toggle="collapse" data-bs-target="#domainDetailsAccordion" 
+                            aria-expanded="false" aria-controls="domainDetailsAccordion">
+                        <span class="fw-bold text-primary"><i class="bi bi-info-circle me-2"></i>View Internship Details</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+
+                <!-- Internship Details Card (Hidden on mobile by default via accordion, always visible on desktop) -->
+                <div class="collapse d-lg-block h-100" id="domainDetailsAccordion">
+                    <div class="card border-0 shadow-sm rounded-3 overflow-hidden mb-4 h-100">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="ratio ratio-4x3 h-100 card-img-wrapper">
+                                    <img [src]="checkoutData.domainImage" class="img-fluid object-fit-cover" [alt]="checkoutData.domainTitle">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3">{{checkoutData.domainCategory}}</span>
+                                    <h3 class="fw-bold mb-3 text-dark">{{checkoutData.domainTitle}}</h3>
+                                    <p class="text-secondary small mb-4">{{checkoutData.domainDescription}}</p>
+
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center">
+                                                <div class="p-2 bg-light rounded-3 me-3 text-primary">
+                                                    <i class="bi bi-clock"></i>
+                                                </div>
+                                                <div>
+                                                    <small class="text-muted d-block">Duration</small>
+                                                    <span class="fw-bold text-dark">{{checkoutData.duration}} Days</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center">
+                                                <div class="p-2 bg-light rounded-3 me-3 text-success">
+                                                    <i class="bi bi-award"></i>
+                                                </div>
+                                                <div>
+                                                    <small class="text-muted d-block">Plan</small>
+                                                    <span class="fw-bold text-dark">{{checkoutData.planName}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div *ngIf="checkoutData.domainSyllabus && checkoutData.domainSyllabus.length > 0">
+                                        <h6 class="fw-bold text-dark mb-3">Key Highlights:</h6>
+                                        <ul class="list-unstyled row g-2">
+                                            <li class="col-12 small text-secondary" *ngFor="let item of checkoutData.domainSyllabus">
+                                                <i class="bi bi-patch-check-fill text-success me-2"></i>{{item}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- Mobile Only: Close Button inside accordion -->
+                                    <div class="d-lg-none mt-4 text-center pb-3">
+                                        <button class="btn btn-outline-secondary btn-sm rounded-pill px-4" 
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#domainDetailsAccordion">
+                                            Close Details <i class="bi bi-chevron-up"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column on Desktop / Bottom on Mobile: Contact & Summary -->
+            <div class="col-lg-4 d-flex flex-column">
+                <!-- User Details Card -->
+                <div class="card border-0 shadow-sm mb-4 rounded-3 overflow-hidden">
+                    <div class="card-header bg-white border-0 py-3 px-4">
+                        <h5 class="mb-0 fw-bold text-primary">
+                            <i class="bi bi-person-circle me-2"></i>Contact Information
+                        </h5>
+                    </div>
+                    <div class="card-body px-4 pb-4">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="small fw-bold text-muted mb-1 d-block">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control bg-light border-0 py-2 low-radius" [(ngModel)]="customerName" placeholder="Enter your full name">
+                            </div>
+                            <div class="col-12">
+                                <label class="small fw-bold text-muted mb-1 d-block">Email Id <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control bg-light border-0 py-2 low-radius" [(ngModel)]="customerEmail" placeholder="Enter your email id">
+                            </div>
+                            <div class="col-12">
+                                <label class="small fw-bold text-muted mb-1 d-block">Mobile Number <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control bg-light border-0 py-2 low-radius" [(ngModel)]="customerPhone" placeholder="Enter 10-digit mobile number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-3 overflow-hidden mb-4">
+                    <div class="card-header bg-white border-0 py-3 px-4">
+                        <h5 class="mb-0 fw-bold text-primary">Order Summary</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between mb-2 text-secondary">
+                            <span class="small">Original Price</span>
+                            <span class="text-decoration-line-through small">₹{{checkoutData.scratchPrice || 899}}</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3 text-dark">
+                            <span class="fw-medium">Offer Price</span>
+                            <span class="fw-bold">₹{{checkoutData.originalPrice}}</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-3 text-success animate__animated animate__fadeIn border-top pt-3 mt-3" *ngIf="couponApplied">
+                            <span class="fw-bold"><i class="bi bi-tag-fill me-1"></i>Coupon Discount ({{couponCode}})</span>
+                            <span class="fw-bold">-₹{{discountAmount}}</span>
+                        </div>
+
+
+                        <hr class="my-4 text-muted opacity-25">
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="h5 fw-bold text-dark mb-0">Amount Payable</span>
+                            <span class="h3 fw-bold text-primary mb-0">₹{{finalPrice}}</span>
+                        </div>
+
+                        <!-- Coupon Section -->
+                        <div class="coupon-section mb-4">
+                            <div class="input-group">
+                                <input type="text" 
+                                       class="form-control bg-light border-0 py-3 ps-4 low-radius" 
+                                       placeholder="Coupon Code"
+                                       [(ngModel)]="couponCode"
+                                       [disabled]="couponApplied">
+                                <button class="btn btn-dark px-4 fw-bold low-radius" 
+                                        type="button" 
+                                        (click)="applyCoupon()"
+                                        [disabled]="couponApplied || isApplyingCoupon">
+                                    <span *ngIf="!isApplyingCoupon">Apply</span>
+                                    <span *ngIf="isApplyingCoupon" class="spinner-border spinner-border-sm"></span>
+                                </button>
+                            </div>
+                            <div *ngIf="couponApplied" class="mt-2 d-flex align-items-center text-success small">
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                <span>Code <strong>{{couponCode}}</strong> applied!</span>
+                            </div>
+                        </div>
+
+                        <button (click)="proceedToPay()" 
+                                class="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow-lg">
+                            Complete Checkout <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+
+                        <p class="text-center text-muted small mt-4 mb-0">
+                            <i class="bi bi-shield-lock-fill me-1"></i> Secure Transaction
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
