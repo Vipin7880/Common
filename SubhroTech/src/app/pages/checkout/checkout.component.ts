@@ -48,6 +48,29 @@ export class CheckoutComponent implements OnInit {
     this.customerPhone = this.checkoutData.customerPhone || '';
   }
 
+  removeCoupon() {
+    this.couponApplied = false;
+    this.discountAmount = 0;
+    this.finalPrice = this.checkoutData?.originalPrice || 0;
+    this.couponCode = ''; // Clear the input as requested
+    this.appliedCouponDetails = null;
+    Swal.fire({
+      title: 'Coupon Removed',
+      text: 'The coupon has been removed.',
+      icon: 'info',
+      timer: 1500,
+      showConfirmButton: false
+    });
+  }
+
+  toggleCoupon() {
+    if (this.couponApplied) {
+      this.removeCoupon();
+    } else {
+      this.applyCoupon();
+    }
+  }
+
   applyCoupon() {
     if (!this.couponCode) {
       Swal.fire({

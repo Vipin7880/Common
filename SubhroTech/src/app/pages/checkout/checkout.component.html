@@ -133,17 +133,19 @@
 
                         <!-- Coupon Section -->
                         <div class="coupon-section mb-4">
-                            <div class="input-group">
+                            <div class="input-group position-relative">
                                 <input type="text" 
                                        class="form-control bg-light border-0 py-3 ps-4 low-radius" 
                                        placeholder="Coupon Code"
                                        [(ngModel)]="couponCode"
                                        [disabled]="couponApplied">
-                                <button class="btn btn-dark px-4 fw-bold low-radius" 
+                                
+                                <button class="btn px-4 fw-bold low-radius text-white" 
+                                        [ngClass]="couponApplied ? 'btn-danger' : 'btn-dark'"
                                         type="button" 
-                                        (click)="applyCoupon()"
-                                        [disabled]="couponApplied || isApplyingCoupon">
-                                    <span *ngIf="!isApplyingCoupon">Apply</span>
+                                        (click)="toggleCoupon()"
+                                        [disabled]="isApplyingCoupon">
+                                    <span *ngIf="!isApplyingCoupon">{{ couponApplied ? 'Clear' : 'Apply' }}</span>
                                     <span *ngIf="isApplyingCoupon" class="spinner-border spinner-border-sm"></span>
                                 </button>
                             </div>
@@ -153,10 +155,16 @@
                             </div>
                         </div>
 
-                        <button (click)="proceedToPay()" 
-                                class="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow-lg">
-                            Complete Checkout <i class="bi bi-arrow-right ms-2"></i>
-                        </button>
+                        <!-- Proceed Button with Mobile Sticky Container -->
+                        <div class="proceed-btn-container">
+                            <button (click)="proceedToPay()" 
+                                    class="btn btn-primary btn-lg w-100 rounded-pill py-3 fw-bold shadow-lg">
+                                Complete Checkout <i class="bi bi-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Spacer for mobile to prevent content hiding behind sticky button -->
+                        <div class="d-lg-none py-4"></div>
 
                         <p class="text-center text-muted small mt-4 mb-0">
                             <i class="bi bi-shield-lock-fill me-1"></i> Secure Transaction
