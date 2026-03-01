@@ -1,0 +1,74 @@
+<header class="sf-header" [class.scrolled]="isScrolled">
+  <div class="container-fluid px-lg-5">
+    <div class="sf-header__inner">
+
+      <!-- Logo -->
+      <a class="sf-header__logo" routerLink="/">
+        <img src="assets/images/logo.png" alt="The Spice Factory" class="img-fluid" style="height: 50px;">
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button class="sf-header__hamburger d-lg-none" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="sf-header__nav d-none d-lg-flex" id="desktop-nav">
+        <ul class="sf-nav">
+          <li *ngFor="let item of navItems"
+              class="sf-nav__item"
+              [class.has-dropdown]="item.children"
+              [class.active]="isActive(item.route, item.exact || false)">
+            <a [routerLink]="item.route"
+               class="sf-nav__link">
+              {{ item.label }}
+              <svg *ngIf="item.children" class="sf-nav__chevron" width="10" height="6" viewBox="0 0 10 6">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+            </a>
+            <ul *ngIf="item.children" class="sf-nav__dropdown">
+              <li *ngFor="let child of item.children">
+                <a [routerLink]="child.route" [fragment]="child.fragment"
+                   class="sf-nav__dropdown-link">
+                  {{ child.label }}
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ── Mobile Sidebar (Left to Right) ── -->
+<div class="sf-sidebar" [class.open]="isMobileMenuOpen">
+  <div class="sf-sidebar__header">
+    <a class="sf-sidebar__logo" routerLink="/" (click)="closeMobileMenu()">
+        <img src="assets/images/logo.png" alt="The Spice Factory" style="max-height: 35px; display: block;">
+    </a>
+    <button class="sf-sidebar__close" (click)="closeMobileMenu()">&times;</button>
+  </div>
+  
+  <nav class="sf-sidebar__nav">
+    <ul class="sf-sidebar__list">
+      <li *ngFor="let item of navItems" class="sf-sidebar__item">
+        <div class="sf-sidebar__row" (click)="item.children ? toggleSubmenu(item) : navigateTo(item.route)">
+          <a [routerLink]="item.route" class="sf-sidebar__link" (click)="!item.children ? closeMobileMenu() : $event.preventDefault()">{{ item.label }}</a>
+          <span *ngIf="item.children" class="sf-sidebar__arrow" [class.expanded]="item.expanded">{{ item.expanded ? '−' : '+' }}</span>
+        </div>
+        
+        <ul class="sf-sidebar__submenu" *ngIf="item.children" [class.open]="item.expanded">
+          <li *ngFor="let child of item.children">
+            <a [routerLink]="child.route" [fragment]="child.fragment" class="sf-sidebar__submenu-link" (click)="closeMobileMenu()">{{ child.label }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Sidebar Backdrop -->
+<div class="sf-sidebar-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()"></div>

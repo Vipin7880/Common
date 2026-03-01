@@ -1,0 +1,1605 @@
+﻿npx : - Generating 
+browser application 
+bundles (phase: 
+setup)...
+At line:1 char:1
++ npx ng build 2>&1 
+| Out-File -FilePath 
+"d:\Personal\Common 
+Project\th ...
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (- Gener   
+ ating br...hase:    
+ setup)...:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+Γ£ö Browser 
+application bundle 
+generation complete.
+Γ£ö Browser 
+application bundle 
+generation complete.
+
+Warning: 
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/home
+/hero/hero.component.
+scss exceeded 
+maximum budget. 
+Budget 2.00 kB was 
+not met by 1.76 kB 
+with a total of 3.76 
+kB.
+
+Warning: 
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/shared/foo
+ter/footer.component.
+scss exceeded 
+maximum budget. 
+Budget 2.00 kB was 
+not met by 621 bytes 
+with a total of 2.61 
+kB.
+
+Warning: 
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/shared/hea
+der/header.component.
+scss exceeded 
+maximum budget. 
+Budget 2.00 kB was 
+not met by 1.14 kB 
+with a total of 3.14 
+kB.
+
+Warning: Γû▓ 
+[WARNING] Comments 
+in CSS use "/* ... 
+*/" instead of "//" 
+[js-comment-in-css]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/abou
+t/.../page-shared.scs
+s:1:18:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+         ~~
+
+
+
+Warning: Γû▓ 
+[WARNING] Comments 
+in CSS use "/* ... 
+*/" instead of "//" 
+[js-comment-in-css]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/care
+ers/.../page-shared.s
+css:1:18:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+         ~~
+
+
+
+Warning: Γû▓ 
+[WARNING] Comments 
+in CSS use "/* ... 
+*/" instead of "//" 
+[js-comment-in-css]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/cont
+act/.../page-shared.s
+css:1:18:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+         ~~
+
+
+
+Warning: Γû▓ 
+[WARNING] Comments 
+in CSS use "/* ... 
+*/" instead of "//" 
+[js-comment-in-css]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/indu
+stry/.../page-shared.
+scss:1:18:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+         ~~
+
+
+
+Warning: Γû▓ 
+[WARNING] Comments 
+in CSS use "/* ... 
+*/" instead of "//" 
+[js-comment-in-css]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/prof
+essional/.../page-sha
+red.scss:1:18:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+         ~~
+
+
+
+Warning: Γû▓ 
+[WARNING] Comments 
+in CSS use "/* ... 
+*/" instead of "//" 
+[js-comment-in-css]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/qual
+ity/.../page-shared.s
+css:1:18:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+         ~~
+
+
+
+Warning: Γû▓ 
+[WARNING] Comments 
+in CSS use "/* ... 
+*/" instead of "//" 
+[js-comment-in-css]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/reta
+il/.../page-shared.sc
+ss:1:18:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+         ~~
+
+
+
+Warning: Γû▓ 
+[WARNING] Unexpected 
+"(" 
+[css-syntax-error]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/abou
+t/.../page-shared.scs
+s:1:9:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+^
+
+
+
+Warning: Γû▓ 
+[WARNING] Unexpected 
+"(" 
+[css-syntax-error]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/care
+ers/.../page-shared.s
+css:1:9:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+^
+
+
+
+Warning: Γû▓ 
+[WARNING] Unexpected 
+"(" 
+[css-syntax-error]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/cont
+act/.../page-shared.s
+css:1:9:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+^
+
+
+
+Warning: Γû▓ 
+[WARNING] Unexpected 
+"(" 
+[css-syntax-error]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/indu
+stry/.../page-shared.
+scss:1:9:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+^
+
+
+
+Warning: Γû▓ 
+[WARNING] Unexpected 
+"(" 
+[css-syntax-error]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/prof
+essional/.../page-sha
+red.scss:1:9:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+^
+
+
+
+Warning: Γû▓ 
+[WARNING] Unexpected 
+"(" 
+[css-syntax-error]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/qual
+ity/.../page-shared.s
+css:1:9:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+^
+
+
+
+Warning: Γû▓ 
+[WARNING] Unexpected 
+"(" 
+[css-syntax-error]
+
+    
+D:/Personal/Common Pr
+oject/the-spice-facto
+ry/src/app/pages/reta
+il/.../page-shared.sc
+ss:1:9:
+      1 Γöé /******/ 
+(() => { // 
+webpackBootstrap
+        Γò╡          
+^
+
+
+
+Warning: Γû▓ 
+[WARNING] Expected 
+identifier but found 
+"*" 
+[css-syntax-error]
+
+    styles.4173e57a6c
+6d9cd4.css:1312:1211:
+      1312 Γöé ...dis
+play:inline}.slicknav
+_menu{*zoom:1;font-si
+ze:16px;backgrou...
+           Γò╡       
+                     
+      ^
+
+
+
+
+
+Error: Module not 
+found: Error: Can't 
+resolve 
+'D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/abo
+ut/.../page-shared.sc
+ss?ngResource' in 
+'D:\Personal\Common P
+roject\the-spice-fact
+ory'
+
+Error: Module not 
+found: Error: Can't 
+resolve 
+'D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/car
+eers/.../page-shared.
+scss?ngResource' in 
+'D:\Personal\Common P
+roject\the-spice-fact
+ory'
+
+Error: Module not 
+found: Error: Can't 
+resolve 
+'D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/con
+tact/.../page-shared.
+scss?ngResource' in 
+'D:\Personal\Common P
+roject\the-spice-fact
+ory'
+
+Error: Module not 
+found: Error: Can't 
+resolve 
+'D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/ind
+ustry/.../page-shared
+.scss?ngResource' in 
+'D:\Personal\Common P
+roject\the-spice-fact
+ory'
+
+Error: Module not 
+found: Error: Can't 
+resolve 
+'D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/pro
+fessional/.../page-sh
+ared.scss?ngResource'
+ in 
+'D:\Personal\Common P
+roject\the-spice-fact
+ory'
+
+Error: Module not 
+found: Error: Can't 
+resolve 
+'D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/qua
+lity/.../page-shared.
+scss?ngResource' in 
+'D:\Personal\Common P
+roject\the-spice-fact
+ory'
+
+Error: Module not 
+found: Error: Can't 
+resolve 
+'D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/ret
+ail/.../page-shared.s
+css?ngResource' in 
+'D:\Personal\Common P
+roject\the-spice-fact
+ory'
+
+Error: node_modules/@
+types/node/child_proc
+ess.d.ts:318:9 - 
+error TS1165: A 
+computed property 
+name in an ambient 
+context must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+318         
+[Symbol.dispose](): 
+void;
+            
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/child_proc
+ess.d.ts:318:17 - 
+error TS2339: 
+Property 'dispose' 
+does not exist on 
+type 
+'SymbolConstructor'.
+
+318         
+[Symbol.dispose](): 
+void;
+                    
+~~~~~~~
+
+
+Error: node_modules/@
+types/node/dgram.d.ts
+:558:9 - error 
+TS1165: A computed 
+property name in an 
+ambient context must 
+refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+558         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/dgram.d.ts
+:558:17 - error 
+TS2339: Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+558         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/events.d.t
+s:581:91 - error 
+TS2304: Cannot find 
+name 'Disposable'.
+
+581         function 
+addAbortListener(sign
+al: AbortSignal, 
+resource: (event: 
+Event) => void): 
+Disposable;
+                     
+                     
+                     
+                     
+          ~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:33
+0:9 - error TS1165: 
+A computed property 
+name in an ambient 
+context must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+330         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:33
+0:17 - error TS2339: 
+Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+330         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:33
+6:9 - error TS1165: 
+A computed property 
+name in an ambient 
+context must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+336         
+[Symbol.dispose](): 
+void;
+            
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:33
+6:17 - error TS2339: 
+Property 'dispose' 
+does not exist on 
+type 
+'SymbolConstructor'.
+
+336         
+[Symbol.dispose](): 
+void;
+                    
+~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:65
+7:9 - error TS1165: 
+A computed property 
+name in an ambient 
+context must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+657         
+[Symbol.dispose](): 
+void;
+            
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:65
+7:17 - error TS2339: 
+Property 'dispose' 
+does not exist on 
+type 
+'SymbolConstructor'.
+
+657         
+[Symbol.dispose](): 
+void;
+                    
+~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:21
+55:41 - error 
+TS2304: Cannot find 
+name 'Disposable'.
+
+2155     interface 
+DisposableTempDir 
+extends Disposable {
+                     
+                     
+   ~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:21
+67:9 - error TS1169: 
+A computed property 
+name in an interface 
+must refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+2167         
+[Symbol.dispose](): 
+void;
+             
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs.d.ts:21
+67:17 - error 
+TS2339: Property 
+'dispose' does not 
+exist on type 
+'SymbolConstructor'.
+
+2167         
+[Symbol.dispose](): 
+void;
+                     
+~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs/promise
+s.d.ts:496:9 - error 
+TS1169: A computed 
+property name in an 
+interface must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+496         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs/promise
+s.d.ts:496:17 - 
+error TS2339: 
+Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+496         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs/promise
+s.d.ts:982:41 - 
+error TS2304: Cannot 
+find name 
+'AsyncDisposable'.
+
+982     interface 
+DisposableTempDir 
+extends 
+AsyncDisposable {
+                     
+                     
+  ~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs/promise
+s.d.ts:994:9 - error 
+TS1169: A computed 
+property name in an 
+interface must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+994         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/fs/promise
+s.d.ts:994:17 - 
+error TS2339: 
+Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+994         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/inspector.
+d.ts:49:66 - error 
+TS2304: Cannot find 
+name 'Disposable'.
+
+49     function 
+open(port?: number, 
+host?: string, 
+wait?: boolean): 
+Disposable;
+                     
+                     
+                     
+     ~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/net.d.ts:6
+17:9 - error TS1165: 
+A computed property 
+name in an ambient 
+context must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+617         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/net.d.ts:6
+17:17 - error 
+TS2339: Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+617         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/perf_hooks
+.d.ts:461:9 - error 
+TS1169: A computed 
+property name in an 
+interface must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+461         
+[Symbol.dispose](): 
+void;
+            
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/perf_hooks
+.d.ts:461:17 - error 
+TS2339: Property 
+'dispose' does not 
+exist on type 
+'SymbolConstructor'.
+
+461         
+[Symbol.dispose](): 
+void;
+                    
+~~~~~~~
+
+
+Error: node_modules/@
+types/node/quic.d.ts:
+427:35 - error 
+TS2304: Cannot find 
+name 
+'AsyncDisposable'.
+
+427     class 
+QuicEndpoint 
+implements 
+AsyncDisposable {
+                     
+                 
+~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/quic.d.ts:
+494:9 - error 
+TS1165: A computed 
+property name in an 
+ambient context must 
+refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+494         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/quic.d.ts:
+494:17 - error 
+TS2339: Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+494         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/quic.d.ts:
+583:34 - error 
+TS2304: Cannot find 
+name 
+'AsyncDisposable'.
+
+583     class 
+QuicSession 
+implements 
+AsyncDisposable {
+                     
+                
+~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/quic.d.ts:
+688:9 - error 
+TS1165: A computed 
+property name in an 
+ambient context must 
+refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+688         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/quic.d.ts:
+688:17 - error 
+TS2339: Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+688         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/readline.d
+.ts:62:46 - error 
+TS2304: Cannot find 
+name 'Disposable'.
+
+62     class 
+Interface implements 
+EventEmitter, 
+Disposable {
+                     
+                     
+      ~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/readline.d
+.ts:223:9 - error 
+TS1165: A computed 
+property name in an 
+ambient context must 
+refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+223         
+[Symbol.dispose](): 
+void;
+            
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/readline.d
+.ts:223:17 - error 
+TS2339: Property 
+'dispose' does not 
+exist on type 
+'SymbolConstructor'.
+
+223         
+[Symbol.dispose](): 
+void;
+                    
+~~~~~~~
+
+
+Error: node_modules/@
+types/node/sqlite.d.t
+s:241:35 - error 
+TS2304: Cannot find 
+name 'Disposable'.
+
+241     class 
+DatabaseSync 
+implements 
+Disposable {
+                     
+                 
+~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/sqlite.d.t
+s:516:9 - error 
+TS1165: A computed 
+property name in an 
+ambient context must 
+refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+516         
+[Symbol.dispose](): 
+void;
+            
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/sqlite.d.t
+s:516:17 - error 
+TS2339: Property 
+'dispose' does not 
+exist on type 
+'SymbolConstructor'.
+
+516         
+[Symbol.dispose](): 
+void;
+                    
+~~~~~~~
+
+
+Error: node_modules/@
+types/node/stream.d.t
+s:672:13 - error 
+TS1165: A computed 
+property name in an 
+ambient context must 
+refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+672             [Symb
+ol.asyncDispose](): 
+Promise<void>;
+                
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/stream.d.t
+s:672:21 - error 
+TS2339: Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+672             [Symb
+ol.asyncDispose](): 
+Promise<void>;
+                     
+   ~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/stream.d.t
+s:1004:13 - error 
+TS1165: A computed 
+property name in an 
+ambient context must 
+refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+1004             [Sym
+bol.asyncDispose](): 
+Promise<void>;
+                 
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/stream.d.t
+s:1004:21 - error 
+TS2339: Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+1004             [Sym
+bol.asyncDispose](): 
+Promise<void>;
+                     
+    ~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/stream.d.t
+s:1549:17 - error 
+TS5084: Tuple 
+members must all 
+have names or all 
+not have names.
+
+1549                 
+...[PipelineSource<an
+y>, ...PipelineTransf
+orm<any, any>[], Pipe
+lineDestination<any, 
+any>],
+                     
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+
+
+Error: node_modules/@
+types/node/stream/pro
+mises.d.ts:202:13 - 
+error TS5084: Tuple 
+members must all 
+have names or all 
+not have names.
+
+202             
+PipelineSource<any>,
+                
+~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/test.d.ts:
+2187:13 - error 
+TS1169: A computed 
+property name in an 
+interface must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+2187             
+[Symbol.dispose](): 
+void;
+                 
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/test.d.ts:
+2187:21 - error 
+TS2339: Property 
+'dispose' does not 
+exist on type 
+'SymbolConstructor'.
+
+2187             
+[Symbol.dispose](): 
+void;
+                     
+    ~~~~~~~
+
+
+Error: node_modules/@
+types/node/timers.d.t
+s:34:53 - error 
+TS2304: Cannot find 
+name 'Disposable'.
+
+34             
+interface Immediate 
+extends RefCounted, 
+Disposable {
+                     
+                     
+             
+~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/timers.d.t
+s:64:17 - error 
+TS1169: A computed 
+property name in an 
+interface must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+64                 
+[Symbol.dispose](): 
+void;
+                   
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/timers.d.t
+s:64:25 - error 
+TS2339: Property 
+'dispose' does not 
+exist on type 
+'SymbolConstructor'.
+
+64                 
+[Symbol.dispose](): 
+void;
+                     
+      ~~~~~~~
+
+
+Error: node_modules/@
+types/node/timers.d.t
+s:86:51 - error 
+TS2304: Cannot find 
+name 'Disposable'.
+
+86             
+interface Timeout 
+extends RefCounted, 
+Disposable, Timer {
+                     
+                     
+           ~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/timers.d.t
+s:144:17 - error 
+TS1169: A computed 
+property name in an 
+interface must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+144                 
+[Symbol.dispose](): 
+void;
+                    
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/timers.d.t
+s:144:25 - error 
+TS2339: Property 
+'dispose' does not 
+exist on type 
+'SymbolConstructor'.
+
+144                 
+[Symbol.dispose](): 
+void;
+                     
+       ~~~~~~~
+
+
+Error: node_modules/@
+types/node/ts5.6/inde
+x.d.ts:29:21 - error 
+TS2726: Cannot find 
+lib definition for 
+'esnext.disposable'.
+
+29 /// <reference lib
+="esnext.disposable" 
+/>
+                     
+  ~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/v8.d.ts:42
+1:9 - error TS1169: 
+A computed property 
+name in an interface 
+must refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+421         
+[Symbol.dispose](): 
+void;
+            
+~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/v8.d.ts:42
+1:17 - error TS2339: 
+Property 'dispose' 
+does not exist on 
+type 
+'SymbolConstructor'.
+
+421         
+[Symbol.dispose](): 
+void;
+                    
+~~~~~~~
+
+
+Error: node_modules/@
+types/node/v8.d.ts:43
+7:9 - error TS1169: 
+A computed property 
+name in an interface 
+must refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+437         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/v8.d.ts:43
+7:17 - error TS2339: 
+Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+437         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/v8.d.ts:45
+3:9 - error TS1169: 
+A computed property 
+name in an interface 
+must refer to an 
+expression whose 
+type is a literal 
+type or a 'unique 
+symbol' type.
+
+453         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/v8.d.ts:45
+3:17 - error TS2339: 
+Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+453         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/web-global
+s/streams.d.ts:40:9 
+- error TS2502: 
+'CompressionStream' 
+is referenced 
+directly or 
+indirectly in its 
+own type annotation.
+
+40     var 
+CompressionStream: 
+typeof globalThis 
+extends {
+           
+~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/web-global
+s/streams.d.ts:51:9 
+- error TS2502: 'Deco
+mpressionStream' is 
+referenced directly 
+or indirectly in its 
+own type annotation.
+
+51     var 
+DecompressionStream: 
+typeof globalThis 
+extends {
+           
+~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/web-global
+s/streams.d.ts:60:9 
+- error TS2502: 'Read
+ableByteStreamControl
+ler' is referenced 
+directly or 
+indirectly in its 
+own type annotation.
+
+60     var ReadableBy
+teStreamController: 
+typeof globalThis 
+extends
+           ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/web-global
+s/streams.d.ts:68:9 
+- error TS2502: 'Read
+ableStreamBYOBReader'
+ is referenced 
+directly or 
+indirectly in its 
+own type annotation.
+
+68     var ReadableSt
+reamBYOBReader: 
+typeof globalThis 
+extends { onmessage: 
+any; ReadableStreamBY
+OBReader: infer T } 
+? T
+           ~~~~~~~~~~
+~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/web-global
+s/streams.d.ts:72:9 
+- error TS2502: 'Read
+ableStreamBYOBRequest
+' is referenced 
+directly or 
+indirectly in its 
+own type annotation.
+
+72     var ReadableSt
+reamBYOBRequest: 
+typeof globalThis 
+extends { onmessage: 
+any; ReadableStreamBY
+OBRequest: infer T } 
+? T
+           ~~~~~~~~~~
+~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/worker_thr
+eads.d.ts:394:9 - 
+error TS1165: A 
+computed property 
+name in an ambient 
+context must refer 
+to an expression 
+whose type is a 
+literal type or a 
+'unique symbol' type.
+
+394         [Symbol.a
+syncDispose](): 
+Promise<void>;
+            
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@
+types/node/worker_thr
+eads.d.ts:394:17 - 
+error TS2339: 
+Property 
+'asyncDispose' does 
+not exist on type 
+'SymbolConstructor'.
+
+394         [Symbol.a
+syncDispose](): 
+Promise<void>;
+                    
+~~~~~~~~~~~~
+
+
+Error: node_modules/t
+ypescript/lib/lib.dom
+.d.ts:14003:11 - 
+error TS2430: 
+Interface 
+'TextEncoder' 
+incorrectly extends 
+interface 'import("no
+de:util").TextEncoder
+'.
+  The types of 'encod
+eInto(...).read' are 
+incompatible between 
+these types.
+    Type 'number | 
+undefined' is not 
+assignable to type 
+'number'.
+      Type 
+'undefined' is not 
+assignable to type 
+'number'.
+
+14003 interface 
+TextEncoder extends 
+TextEncoderCommon {
+                
+~~~~~~~~~~~
+
+
+Error: The loader 
+"D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/abo
+ut/.../page-shared.sc
+ss" didn't return a 
+string.
+
+Error: The loader 
+"D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/car
+eers/.../page-shared.
+scss" didn't return 
+a string.
+
+Error: The loader 
+"D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/con
+tact/.../page-shared.
+scss" didn't return 
+a string.
+
+Error: The loader 
+"D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/ind
+ustry/.../page-shared
+.scss" didn't return 
+a string.
+
+Error: The loader 
+"D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/pro
+fessional/.../page-sh
+ared.scss" didn't 
+return a string.
+
+Error: The loader 
+"D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/qua
+lity/.../page-shared.
+scss" didn't return 
+a string.
+
+Error: The loader 
+"D:/Personal/Common P
+roject/the-spice-fact
+ory/src/app/pages/ret
+ail/.../page-shared.s
+css" didn't return a 
+string.
+
+

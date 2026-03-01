@@ -1,0 +1,41 @@
+<section class="sf-hero" id="hero">
+  <div class="sf-hero__overlay"></div>
+  <div class="sf-hero__particles">
+    <span *ngFor="let i of [1,2,3,4,5,6,7,8]" class="particle particle--{{i}}"></span>
+  </div>
+
+  <div class="container position-relative">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7">
+        <div class="sf-hero__content" [class.visible]="isVisible">
+          <span class="sf-hero__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Premium Quality Since 1982
+          </span>
+          <h1 class="sf-hero__title">
+            MASTERING
+            <span class="sf-hero__script">Herbs & Spices</span>
+          </h1>
+          <p class="sf-hero__subtitle">
+            From field to flavor — we craft the world's finest herbs, spices, and seasonings
+            for retail, professional kitchens, and the food industry.
+          </p>
+          <div class="sf-hero__cta">
+            <a routerLink="/retail" class="btn-sf-primary">Explore Products</a>
+            <a routerLink="/about" class="btn-sf-outline">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="sf-hero__scroll">
+    <div class="scroll-mouse">
+      <div class="scroll-mouse__wheel"></div>
+    </div>
+    <span>Scroll to discover</span>
+  </div>
+</section>

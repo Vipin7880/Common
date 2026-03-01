@@ -1,0 +1,74 @@
+﻿npx : - Generating 
+browser application 
+bundles (phase: setup)...
+At line:1 char:1
++ npx ng build 2>&1 | 
+Out-File -FilePath 
+"d:\Personal\Common 
+Project\th ...
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (-  
+   Generating br...hase   
+ : setup)...:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+Γ£ö Browser application 
+bundle generation 
+complete.
+Γ£ö Browser application 
+bundle generation 
+complete.
+- Copying assets...
+Γ£ö Copying assets 
+complete.
+- Generating index html...
+- Generating index html...
+2 rules skipped due to 
+selector errors:
+  legend+* -> Cannot read 
+property 'type' of 
+undefined
+  .form-floating>~label 
+-> Did not expect 
+successive traversals.
+Γ£ö Index html generation 
+complete.
+
+Initial Chunk Files           | Names         |  Raw Size | Estimated Transfer Size
+main.78916b40776eea84.js      | main          | 263.64 kB |                62.13 kB
+styles.238bf60ab90dc189.css   | styles        | 225.30 kB |                23.41 kB
+scripts.64713681c05176e0.js   | scripts       |  83.43 kB |                26.67 kB
+polyfills.4c60457f36d1021d.js | polyfills     |  33.09 kB |                10.63 kB
+runtime.ddac83c597111fec.js   | runtime       |   1.06 kB |               594 bytes
+
+| Initial Total | 606.52 kB |               123.41 kB
+
+Build at: 2026-02-22T13:14:52.184Z - Hash: d7f9b813aba072fa - Time: 47528ms
+
+Warning: Γû▓ [WARNING] 
+Expected identifier but 
+found "*" 
+[css-syntax-error]
+
+    styles.4173e57a6c6d9cd
+4.css:1312:1211:
+      1312 Γöé ...display:
+inline}.slicknav_menu{*zoo
+m:1;font-size:16px;backgro
+u...
+           Γò╡            
+                      ^
+
+
+
+Warning: bundle initial 
+exceeded maximum budget. 
+Budget 500.00 kB was not 
+met by 106.52 kB with a 
+total of 606.52 kB.
+
+

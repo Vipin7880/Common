@@ -1,0 +1,566 @@
+// ── Shared Page Styles ──
+// Used by all page stub components (retail, professional, industry, about, quality, careers, contact)
+.font-condensed { font-family: var(--font-condensed) !important; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+
+// ── Sharp Brand Buttons ──
+.btn-brand-primary {
+  display: inline-block;
+  background: var(--sf-red);
+  color: var(--sf-white);
+  padding: 12px 34px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--font-body);
+  border: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  
+  &:hover {
+    background: var(--sf-red-dark);
+    transform: translateY(-2px);
+    color: var(--sf-white);
+  }
+}
+
+.btn-brand-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--sf-dark);
+  padding: 11px 34px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--font-body);
+  border: 1px solid var(--sf-dark);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--sf-dark);
+    color: var(--sf-white);
+  }
+}
+
+.brand-section-divider {
+    border: 0;
+    height: 1px;
+    background: #eeeeee;
+    margin: 80px 0;
+}
+
+// ── Page Hero Banner ──
+.page-hero {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  // Global overlay for text readability
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    z-index: 1;
+  }
+
+  &--retail { background-image: url('/assets/images/retail-hero.png'); }
+  &--professional { background-image: url('/assets/images/professional-hero.png'); }
+  &--industry { background-image: url('/assets/images/industry-hero.png'); }
+  &--about { background-image: url('/assets/images/about-hero.png'); }
+  &--careers { background-image: url('/assets/images/careers-hero.png'); }
+  &--quality { background-image: url('/assets/images/quality-hero.png'); }
+  &--contact { background-image: url('/assets/images/contact-hero.png'); }
+  &--terms { background-image: url('/assets/images/terms-hero.png'); }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    animation: fadeInUp 0.7s ease-out;
+  }
+
+  &__badge {
+    display: inline-block;
+    background: rgba(212, 168, 67, 0.2);
+    border: 1px solid rgba(212, 168, 67, 0.4);
+    color: var(--sf-gold-light);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding-top: 140px;
+    padding-bottom: 50px;
+    
+    &::after {
+      background: rgba(0,0,0,0.7); // Darker overall overlay for mobile
+    }
+  }
+}
+
+// ── Content Card ──
+.content-card {
+  background: var(--sf-white);
+  border-radius: 16px;
+  padding: 36px 32px;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+  box-shadow: var(--shadow-soft);
+
+  &:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--sf-dark);
+  }
+
+  p {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: var(--sf-grey);
+  }
+}
+
+// ── Feature List ──
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+
+  li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    font-size: 0.92rem;
+    color: var(--sf-grey);
+    line-height: 1.6;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--sf-gold);
+    }
+  }
+}
+
+// ── Contact Info ──
+.contact-info-block {
+  .contact-info-item {
+    margin-bottom: 24px;
+
+    h5 {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--sf-gold);
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--sf-charcoal);
+      margin: 0;
+
+      a {
+        color: var(--sf-charcoal);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--sf-red);
+        }
+      }
+    }
+  }
+}
+
+// ── Contact Form ──
+.contact-form {
+  .form-label {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--sf-charcoal);
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+  }
+
+  .form-control {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background: var(--sf-cream);
+
+    &:focus {
+      border-color: var(--sf-gold);
+      box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.15);
+      background: var(--sf-white);
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+// ── Industry Visibility Fix ──
+.page-hero--industry + section {
+  .card-icon-wrap {
+    background: transparent !important;
+    display: flex;
+    justify-content: center;
+    color: var(--sf-red) !important;
+    
+    svg {
+      fill: var(--sf-red) !important;
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .content-card {
+    text-align: center;
+  }
+}
+
+// ── Shared Stat Cards ──
+.stat-mini-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  &:hover {
+    background: rgba(255,255,255,0.15) !important;
+    transform: translateY(-2px);
+  }
+}
+
+// ── Region Pills ──
+.region-pill {
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.12) !important; // Increased base opacity
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  
+  span {
+    color: #fff !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: var(--sf-gold) !important;
+    transform: translateY(-2px);
+  }
+}
+
+// ── Process Cards ──
+.process-card {
+    background: var(--sf-white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-medium);
+        border-color: var(--sf-gold);
+    }
+
+    &__number {
+        width: 32px;
+        height: 32px;
+        background: var(--sf-gold);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__title { font-size: 1.15rem; margin-bottom: 15px; color: var(--sf-dark); }
+    &__list {
+        padding: 0; list-style: none; margin: 0;
+        li { font-size: 0.85rem; color: #666; margin-bottom: 8px; position: relative; padding-left: 15px; }
+        li::before { content: '•'; position: absolute; left: 0; color: var(--sf-gold); }
+    }
+}
+
+// ── Placeholder Graphics ──
+.image-placeholder-card {
+    border: 2px dashed rgba(212, 168, 67, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+
+// ── Team Card ──
+.team-card {
+  background: var(--sf-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.05);
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+    
+    .team-card__image {
+      transform: scale(1.1);
+    }
+  }
+
+  &__image-wrap {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60%;
+      background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  &__content {
+    padding: 24px;
+    text-align: center;
+  }
+
+  &__name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--sf-dark);
+    margin-bottom: 4px;
+  }
+
+  &__role {
+    display: block;
+    color: var(--sf-gold);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--sf-grey);
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--sf-red);
+      }
+
+      svg {
+        color: var(--sf-gold);
+      }
+    }
+  }
+}
+
+// ── About Timeline ──
+.timeline {
+  position: relative;
+  border-left: 2px solid rgba(212, 168, 67, 0.3); // Gold line
+  padding-left: 30px;
+  margin-left: 15px;
+
+  @media (max-width: 768px) {
+    margin-inline: 30px; // Push entire timeline inwards on mobile so the -70px year badge doesn't hit the screen edge
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 40px;
+    &:last-child { margin-bottom: 0; }
+  }
+
+  &__year {
+    position: absolute;
+    left: -70px; // Pull out across the line
+    top: 0;
+    width: 80px;
+    height: 36px;
+    background: var(--sf-red);
+    color: var(--sf-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(200, 16, 46, 0.3);
+    
+    // The "dot" on the line
+    &::after {
+      content: '';
+      position: absolute;
+      right: -24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--sf-gold);
+      border: 3px solid var(--sf-cream); // Match bg
+    }
+  }
+
+  &__content {
+    background: var(--sf-white);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0,0,0,0.04);
+    
+    h4 { color: var(--sf-dark); margin-bottom: 8px; font-size: 1.15rem; }
+    p { margin: 0; font-size: 0.95rem; line-height: 1.6; }
+  }
+}
+
+// ── Activity Cards ──
+.activity-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--sf-gold);
+    
+    .activity-card__icon {
+      background: var(--sf-red);
+      color: var(--sf-white);
+    }
+  }
+  
+  &__icon {
+    width: 64px;
+    height: 64px;
+    background: var(--sf-cream);
+    color: var(--sf-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+  }
+  
+  &__title { font-size: 1.25rem; margin-bottom: 15px; }
+  &__desc { font-size: 0.95rem; color: var(--sf-grey); margin: 0; }
+}
+
+// ── Sustainability Cards ──
+.sustain-card {
+  text-align: center;
+  padding: 20px;
+  
+  &__icon {
+    color: var(--sf-green);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover &__icon {
+    transform: scale(1.1);
+  }
+  
+  &__title { font-size: 1.25rem; margin-bottom: 12px; color: var(--sf-dark); }
+  &__desc { font-size: 0.95rem; color: var(--sf-grey); opacity: 0.8; }
+}

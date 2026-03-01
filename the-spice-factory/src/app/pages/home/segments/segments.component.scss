@@ -1,0 +1,97 @@
+// ── Segments Section Styles ──
+
+.sf-segments {
+  background: var(--sf-cream);
+}
+
+.segment-card {
+  background: var(--sf-white);
+  border-radius: 16px;
+  padding: 40px 32px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  animation: fadeInUp 0.6s ease-out both;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent, var(--sf-red));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .segment-card__icon-wrap {
+      background: var(--accent, var(--sf-red));
+      color: white;
+    }
+
+    .segment-card__link svg {
+      transform: translateX(4px);
+    }
+  }
+
+  &__icon-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--accent, var(--sf-red));
+    margin-bottom: 24px;
+    transition: all 0.4s ease;
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sf-dark);
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--sf-grey);
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent, var(--sf-red));
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--accent, var(--sf-red));
+    }
+  }
+}

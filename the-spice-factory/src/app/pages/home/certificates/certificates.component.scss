@@ -1,0 +1,58 @@
+// ── Certificates Section Styles ──
+
+.sf-certificates {
+  background: var(--sf-white);
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 30px 28px;
+  background: var(--sf-cream);
+  border-radius: 14px;
+  min-width: 160px;
+  transition: all 0.35s ease;
+  animation: fadeInUp 0.5s ease-out both;
+  border: 1px solid transparent;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    border-color: rgba(212, 168, 67, 0.2);
+
+    .cert-item__icon {
+      background: var(--sf-gold);
+      color: var(--sf-white);
+    }
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 168, 67, 0.12);
+    color: var(--sf-gold);
+    transition: all 0.35s ease;
+  }
+
+  &__name {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--sf-dark);
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+}

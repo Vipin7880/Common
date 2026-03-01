@@ -1,0 +1,193 @@
+// ── Footer Component Styles ──
+
+.sf-footer {
+  position: relative;
+  background: var(--sf-dark);
+  color: rgba(255, 255, 255, 0.7);
+
+  &__wave {
+    margin-top: -1px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 60px;
+    }
+  }
+
+  &__main {
+    padding: 80px 0 60px;
+  }
+
+  // ── Brand Column ──
+  &__brand {
+    .footer-logo {
+      margin-bottom: 24px;
+
+      &__badge {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(135deg, #C8102E, #9B0D22);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        justify-content: center;
+        border: 2px solid rgba(255,255,255,0.2);
+      }
+
+      &__the {
+        font-family: var(--font-body);
+        font-size: 0.45rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: rgba(255,255,255,0.85);
+        text-transform: uppercase;
+      }
+
+      &__spice {
+        font-family: var(--font-heading);
+        font-size: 1.15rem;
+        font-weight: 700;
+        font-style: italic;
+        color: #fff;
+      }
+
+      &__factory {
+        font-family: var(--font-body);
+        font-size: 0.35rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: rgba(255,255,255,0.85);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__tagline {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 24px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 12px;
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.6);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: var(--sf-gold);
+        color: var(--sf-dark);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  // ── Headings ──
+  &__heading {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--sf-white);
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: var(--sf-gold);
+      border-radius: 1px;
+    }
+  }
+
+  // ── Links ──
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-left: 0;
+
+      &:hover {
+        color: var(--sf-gold);
+        padding-left: 6px;
+      }
+    }
+  }
+
+  // ── Contact ──
+  &__contact {
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+
+      svg {
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+
+      span, a {
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.6;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--sf-gold);
+      }
+    }
+  }
+
+  // ── Bottom Bar ──
+  &__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 20px 0;
+
+    p {
+      margin: 0;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.82rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--sf-gold);
+      }
+    }
+  }
+}

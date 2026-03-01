@@ -1,0 +1,300 @@
+/* ============================================
+   THE SPICE FACTORY — Global Styles
+   ============================================ */
+
+// ── Color Palette ──
+:root {
+  --sf-red: #C8102E;
+  --sf-red-dark: #9B0D22;
+  --sf-gold: #D4A843;
+  --sf-gold-light: #E8C97A;
+  --sf-dark: #1A1A1A;
+  --sf-dark-alt: #2D2D2D;
+  --sf-charcoal: #333333;
+  --sf-grey: #666666;
+  --sf-light: #F5F1EB;
+  --sf-cream: #FDF8F0;
+  --sf-white: #FFFFFF;
+  --sf-green: #4A7C59;
+
+  --font-heading: 'Montserrat', 'Inter', sans-serif;
+  --font-condensed: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-heavy: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+// ── Reset & Base ──
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--sf-charcoal);
+  background-color: var(--sf-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+
+  &.no-scroll {
+    overflow: hidden !important;
+  }
+}
+
+// Ensure mobile containers always have a buffer from the edges
+@media (max-width: 768px) {
+  .container, .container-fluid {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+}
+
+// ── Typography ──
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--sf-dark);
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
+h4 { font-size: 1.3rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: var(--sf-grey);
+}
+
+a {
+  color: var(--sf-red);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+
+  &:hover {
+    color: var(--sf-red-dark);
+  }
+}
+
+// ── Section Patterns ──
+.section {
+  padding: 80px 0; // Standardized to 80px as requested
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.section-padding {
+  padding: 80px 0 !important;
+  
+  @media (max-width: 768px) {
+    padding: 60px 0 !important;
+  }
+}
+
+.section-gap { 
+  margin-top: 80px !important; 
+  @media (max-width: 768px) { margin-top: 60px !important; }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+
+  .section-subtitle {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--sf-gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    color: var(--sf-dark);
+    margin-bottom: 16px;
+  }
+
+  .section-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sf-red), var(--sf-gold));
+    margin: 0 auto 20px;
+    border-radius: 2px;
+  }
+
+  .section-description {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: var(--sf-grey);
+  }
+}
+
+// ── Buttons ──
+.btn-sf-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--sf-red) 0%, var(--sf-red-dark) 100%);
+  color: var(--sf-white);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-transform: uppercase;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(200, 16, 46, 0.35);
+    color: var(--sf-white);
+  }
+}
+
+.btn-sf-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--sf-white);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  padding: 13px 36px;
+  border: 2px solid var(--sf-gold);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-transform: uppercase;
+
+  &:hover {
+    background: var(--sf-gold);
+    color: var(--sf-dark);
+    transform: translateY(-2px);
+  }
+}
+
+// ── Animations ──
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+// ── Utility ──
+.bg-sf-dark { background-color: var(--sf-dark); }
+.bg-sf-cream { background-color: var(--sf-cream); }
+.bg-sf-light { background-color: var(--sf-light); }
+.text-sf-gold { color: var(--sf-gold); }
+.text-sf-red { color: var(--sf-red); }
+
+// ── Industry Visibility & Spacing Fix ──
+.page-hero--industry + .section-padding {
+  margin-top: 0 !important;
+}
+
+// Ensure Industry sections have gaps
+app-industry {
+  section {
+    border-bottom: 1px solid rgba(0,0,0,0.02);
+  }
+}
+
+
+
+// ── Mobile Typography ──
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.4rem; }
+  body { font-size: 15px; }
+}
+
+// ── Scrollbar ──
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sf-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sf-gold);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--sf-red);
+  }
+}
+
+// ── Selection ──
+::selection {
+  background: var(--sf-gold);
+  color: var(--sf-dark);
+}
