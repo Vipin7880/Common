@@ -1,56 +1,55 @@
-<footer class="bg-dark text-light py-5 mt-auto border-top border-secondary">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <h5 class="fw-bold mb-3 text-white">
-                    <img src="assets/logo.png" alt="Logo" height="30" class="me-2">
-                    Subhro <span class="text-gradient">Tech</span>
+<footer class="text-white pt-5 pb-4 mt-auto" style="background-color: var(--primary-color);">
+    <div class="container pt-4">
+        <div class="row g-5 mb-5">
+            <!-- Column 1: Brand -->
+            <div class="col-lg-4 col-md-6 pe-lg-5">
+                <h5 class="fw-bold mb-4 text-white d-flex align-items-center">
+                    <img src="assets/logo.png" alt="Logo" height="35" class="me-2 bg-white rounded p-1">
+                    Subhro <span style="color: var(--secondary-color);" class="ms-1">Tech</span>
                 </h5>
-                <p class="text-secondary">Empowering the next generation of tech leaders through hands-on internship
-                    experiences. Join us and launch your career today.</p>
-                <div class="d-flex gap-3 mt-3">
-                    <a href="#" class="text-secondary hover-text-primary"><i class="bi bi-linkedin fs-5"></i></a>
-                    <a href="#" class="text-secondary hover-text-primary"><i class="bi bi-twitter fs-5"></i></a>
-                    <a href="#" class="text-secondary hover-text-primary"><i class="bi bi-github fs-5"></i></a>
+                <p class="text-white-50 lh-lg mb-4">Empowering ambitious businesses through cutting-edge software development, scalable architectures, and transformative digital strategies.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none hover-lift" style="width: 40px; height: 40px; transition: all 0.3s;"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a href="#" class="bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none hover-lift" style="width: 40px; height: 40px; transition: all 0.3s;"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none hover-lift" style="width: 40px; height: 40px; transition: all 0.3s;"><i class="bi bi-github fs-5"></i></a>
                 </div>
             </div>
+            
+            <!-- Column 2: Quick Links -->
             <div class="col-lg-2 col-md-6">
-                <h6 class="fw-bold mb-3 text-white">Company</h6>
-                <ul class="list-unstyled text-secondary">
-                    <li class="mb-2"><a routerLink="/about"
-                            class="text-decoration-none text-secondary hover-text-white">About Us</a></li>
-                    <li class="mb-2"><a routerLink="/services"
-                            class="text-decoration-none text-secondary hover-text-white">Services</a></li>
-                    <li class="mb-2"><a routerLink="/domains"
-                            class="text-decoration-none text-secondary hover-text-white">Internships</a></li>
-                    <li class="mb-2"><a routerLink="/contact"
-                            class="text-decoration-none text-secondary hover-text-white">Contact</a></li>
+                <h6 class="fw-bold mb-4 text-white text-uppercase letter-spacing-1 small">Company</h6>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3"><a routerLink="/about" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">About Us</a></li>
+                    <li class="mb-3"><a routerLink="/services" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Our Services</a></li>
+                    <li class="mb-3"><a routerLink="/contact" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Contact Us</a></li>
                 </ul>
             </div>
+            
+            <!-- Column 3: Legal -->
             <div class="col-lg-2 col-md-6">
-                <h6 class="fw-bold mb-3 text-white">Legal</h6>
-                <ul class="list-unstyled text-secondary">
-                    <li class="mb-2"><a routerLink="/terms"
-                            class="text-decoration-none text-secondary hover-text-white">Terms & Conditions</a></li>
-                    <li class="mb-2"><a routerLink="/refunds"
-                            class="text-decoration-none text-secondary hover-text-white">Cancellation & Refunds</a>
-                    </li>
-                    <li class="mb-2"><a routerLink="/privacy"
-                            class="text-decoration-none text-secondary hover-text-white">Privacy Policy</a></li>
+                <h6 class="fw-bold mb-4 text-white text-uppercase letter-spacing-1 small">Legal</h6>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3"><a routerLink="/terms" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Terms of Service</a></li>
+                    <li class="mb-3"><a routerLink="/refunds" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Refund Policy</a></li>
+                    <li class="mb-3"><a routerLink="/privacy" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Privacy Policy</a></li>
                 </ul>
             </div>
+            
+            <!-- Column 4: Newsletter -->
             <div class="col-lg-4 col-md-6">
-                <h6 class="fw-bold mb-3 text-white">Newsletter</h6>
-                <p class="text-secondary small">Subscribe to get the latest internship updates and tech news.</p>
-                <div class="input-group mb-3">
-                    <input type="email" class="form-control bg-dark border-secondary text-white"
-                        placeholder="Your email" aria-label="Your email" [(ngModel)]="email">
-                    <button class="btn btn-primary" type="button" (click)="subscribe()">Subscribe</button>
+                <h6 class="fw-bold mb-4 text-white text-uppercase letter-spacing-1 small">Newsletter</h6>
+                <p class="text-white-50 mb-4">Subscribe to our newsletter for the latest tech insights and company updates.</p>
+                <div class="input-group shadow-sm" style="height: 50px;">
+                    <input type="email" class="form-control border-0 px-4" placeholder="Email address" aria-label="Email address" [(ngModel)]="email">
+                    <button class="btn px-4 fw-bold text-dark" type="button" (click)="subscribe()" style="background-color: var(--secondary-color) !important; border: none;">Subscribe</button>
                 </div>
             </div>
         </div>
-        <div class="border-top border-secondary mt-4 pt-4 text-center text-secondary small">
-            <p class="mb-0">&copy; 2026 Subhro Tech. All rights reserved.</p>
+        
+        <!-- Bottom Copyright -->
+        <div class="pt-4 border-top border-light border-opacity-10 text-center text-md-start d-md-flex justify-content-between align-items-center">
+            <p class="mb-0 text-white-50 small">&copy; 2026 Subhro Tech. All rights reserved.</p>
+            <p class="mb-0 text-white-50 small mt-2 mt-md-0">GSTIN: <span class="text-white fw-medium">19EFMPM7781H1ZM</span></p>
         </div>
     </div>
 </footer>

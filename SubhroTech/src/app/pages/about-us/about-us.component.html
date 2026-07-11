@@ -1,61 +1,82 @@
-<div class="container py-5">
-    <div class="row align-items-center mb-5">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-            <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                    alt="Our Team" class="img-fluid rounded-3 shadow-lg w-100">
+<!-- Cinematic Header -->
+<div class="pt-5 pb-5" style="background-image: linear-gradient(rgba(0, 33, 71, 0.85), rgba(0, 33, 71, 0.95)), url('assets/images/hero-bg.png'); background-size: cover; background-position: center;">
+    <div class="container pt-4">
+        <div class="row align-items-end mb-4">
+            <div class="col-lg-8">
+                <span class="d-inline-block py-2 px-3 rounded-pill bg-white bg-opacity-10 text-white fw-bold text-uppercase small mb-3" style="letter-spacing: 1px;">Company</span>
+                <h1 class="display-4 fw-bold text-white mb-3">About <span style="color: var(--secondary-color);">Subhro Tech</span></h1>
+                <p class="text-white-50 lead mb-0" style="max-width: 600px;">A premier technology consultancy committed to empowering businesses and nurturing the next generation of tech talent.</p>
             </div>
         </div>
-        <div class="col-lg-6 ps-lg-5">
-            <h6 class="text-primary fw-bold text-uppercase">Who We Are</h6>
-            <h1 class="display-5 fw-bold mb-4">Innovating for a Digital Future</h1>
-            <p class="lead text-secondary mb-4">Subhro Tech is a premier technology consultancy committed to empowering
-                businesses and nurturing the next generation of tech talent.</p>
-            <p class="text-secondary mb-4">Founded with a vision to bridge the gap between academic learning and
-                industry demands, we offer top-tier software solutions while providing a platform for aspiring
-                developers to gain real-world experience.</p>
+    </div>
+</div>
 
-            <div class="bg-light p-4 rounded-3 mb-4">
-                <h5 class="fw-bold mb-3"><i class="bi bi-info-circle-fill text-primary me-2"></i>Company Details</h5>
-                <ul class="list-unstyled mb-0 small text-secondary">
-                    <li class="mb-2 d-flex"><i class="bi bi-geo-alt-fill me-2 text-primary"></i>
-                        <span>HOLDING NO 564, PLOT NO 0432472, WARD NO 43/95, BURNPUR, NABAGHANTI, GOWALA PARA, ASANSOL,
-                            Paschim Bardhaman, West Bengal, 713325</span>
-                    </li>
-                    <li class="mb-2"><i class="bi bi-card-heading me-2 text-primary"></i> <strong>GSTIN:</strong>
-                        19EFMPM7781H1ZM</li>
-                    <li class="mb-0"><i class="bi bi-upc-scan me-2 text-primary"></i> <strong>HSN Code:</strong> 998313
-                    </li>
-                </ul>
+<!-- Main Content Area -->
+<div class="container py-5 mt-4">
+    <div class="row g-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-4 mb-lg-0 position-relative">
+            <!-- Decorative Square behind image -->
+            <div class="position-absolute bg-light rounded-4 d-none d-lg-block" style="width: 100%; height: 100%; top: 20px; left: -20px; z-index: 0;"></div>
+            <img src="assets/images/about-abstract.png" alt="Company Overview" class="img-fluid rounded-4 shadow-lg position-relative z-index-1 w-100" style="object-fit: cover; height: 500px;">
+            
+            <!-- Floating Stats Card -->
+            <div class="position-absolute bottom-0 end-0 bg-white p-4 rounded-4 shadow-lg z-index-2 me-n4 mb-4 d-none d-xl-block border-start border-4 border-primary" style="width: 250px;">
+                <h3 class="fw-bold text-dark mb-1" [appCountUp]="235" [duration]="2500">0+</h3>
+                <p class="text-secondary small mb-0 fw-medium">Projects Delivered</p>
+                <hr class="my-3 opacity-25">
+                <h3 class="fw-bold text-dark mb-1" [appCountUp]="7" [duration]="1500">0+</h3>
+                <p class="text-secondary small mb-0 fw-medium">Years of Excellence</p>
             </div>
-
-            <div class="row g-4 mt-2">
-                <div class="col-6">
-                    <h2 class="fw-bold text-dark mb-0" [appCountUp]="7" [duration]="1500">0+</h2>
-                    <p class="text-secondary">Years of Excellence</p>
-                </div>
-                <div class="col-6">
-                    <h2 class="fw-bold text-dark mb-0" [appCountUp]="235" [duration]="2500">0+</h2>
-                    <p class="text-secondary">Projects Delivered</p>
+        </div>
+        
+        <div class="col-lg-6 ps-lg-5">
+            <h2 class="display-5 fw-bold mb-4 text-dark">Innovating for a Digital Future</h2>
+            <p class="lead text-secondary mb-4 opacity-75">Founded with a vision to bridge the gap between academic learning and industry demands, we offer top-tier software solutions.</p>
+            
+            <!-- Company Details Bento -->
+            <div class="card border-0 rounded-4 shadow-sm bg-light p-4 mb-4">
+                <h5 class="fw-bold mb-4 text-dark d-flex align-items-center">
+                    <i class="bi bi-building text-primary me-2 fs-4"></i> Corporate Details
+                </h5>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <p class="small text-secondary text-uppercase fw-bold mb-1 letter-spacing-1">GSTIN</p>
+                        <p class="fw-medium text-dark mb-0">19EFMPM7781H1ZM</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="small text-secondary text-uppercase fw-bold mb-1 letter-spacing-1">HSN Code</p>
+                        <p class="fw-medium text-dark mb-0">998313</p>
+                    </div>
+                    <div class="col-12 mt-3 pt-3 border-top border-dark border-opacity-10">
+                        <p class="small text-secondary text-uppercase fw-bold mb-2 letter-spacing-1">Headquarters</p>
+                        <p class="fw-medium text-dark mb-0 d-flex align-items-start">
+                            <i class="bi bi-geo-alt-fill text-primary me-2 mt-1"></i>
+                            HOLDING NO 564, PLOT NO 0432472, BURNPUR, ASANSOL, Paschim Bardhaman, West Bengal, 713325
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Mission & Vision Split -->
     <div class="row g-4 mt-5">
         <div class="col-md-6">
-            <div class="p-4 bg-light rounded-3 h-100">
-                <h3 class="fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Our Mission</h3>
-                <p class="text-secondary mb-0">To deliver exceptional digital solutions that drive growth for our
-                    clients, while simultaneously building a robust ecosystem for skill development and career
-                    acceleration.</p>
+            <div class="card h-100 border-0 rounded-4 shadow-sm p-4 p-md-5 position-relative bg-white">
+                <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-3 mb-4" style="width: 70px; height: 70px;">
+                    <i class="bi bi-bullseye fs-1"></i>
+                </div>
+                <h3 class="fw-bold mb-3 text-dark">Our Mission</h3>
+                <p class="text-secondary mb-0 fs-6 lh-lg">To deliver exceptional digital solutions that drive growth for our clients, while simultaneously building a robust ecosystem for skill development and career acceleration.</p>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="p-4 bg-light rounded-3 h-100">
-                <h3 class="fw-bold mb-3"><i class="bi bi-eye text-primary me-2"></i>Our Vision</h3>
-                <p class="text-secondary mb-0">To be a global leader in technology innovation and education, known for
-                    quality, integrity, and impactful contributions to the tech community.</p>
+            <div class="card h-100 border-0 rounded-4 shadow-sm p-4 p-md-5 position-relative bg-white">
+                <div class="d-inline-flex align-items-center justify-content-center text-white rounded-3 mb-4" style="width: 70px; height: 70px; background-color: var(--secondary-color);">
+                    <i class="bi bi-eye fs-1"></i>
+                </div>
+                <h3 class="fw-bold mb-3 text-dark">Our Vision</h3>
+                <p class="text-secondary mb-0 fs-6 lh-lg">To be a global leader in technology innovation and education, known for quality, integrity, and impactful contributions to the tech community.</p>
             </div>
         </div>
     </div>
