@@ -7,15 +7,31 @@ $gold: #D4AF37;
     transition: background 0.3s;
     background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
     padding: 15px 0;
+    @media (max-width: 991px) {
+        padding: 0;
+        background: rgba(255, 255, 255, 0.703);
+        
+        .hamburger-btn span {
+            background: $navy;
+        }
+    }
     z-index: 1060;
     
     &.scrolled {
-       background: $navy;
+       background: white;
        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+       
+       .desktop-menu a {
+           color: $navy;
+       }
+
+       .hamburger-btn span {
+           background: $navy;
+       }
     }
 
     .desktop-menu {
-        display: none; // Hidden by default (mobile)
+        display: none;
         
         @media (min-width: 992px) {
             display: flex;
@@ -112,7 +128,7 @@ $gold: #D4AF37;
     top: 0;
     left: 0;
     width: 100%;
-    background: $navy;
+    background: white;
     z-index: 1050; // Below hamburger/navbar
     padding-top: 80px; // Clear the navbar
     transform: translateY(-100%);
@@ -126,21 +142,21 @@ $gold: #D4AF37;
     .menu-content {
         display: flex;
         flex-direction: column;
-        padding: 20px 0;
+        padding:0px;
         
         a {
-            color: #fff;
+            color: $navy;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 16px;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
-            padding: 15px 30px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 10px 20px;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
             transition: background 0.3s;
 
             &:hover {
-                background: rgba(255,255,255,0.05);
+                background: rgba(0, 33, 71, 0.05);
                 color: $gold;
                 padding-left: 40px;
             }
