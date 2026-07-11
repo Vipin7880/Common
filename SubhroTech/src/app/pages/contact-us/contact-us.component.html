@@ -1,7 +1,7 @@
 <div class="container-fluid px-0">
     <div class="row g-0">
         <!-- Left Side: Dark Navy Info -->
-        <div class="col-lg-5 col-xl-4 bg-primary text-white d-flex flex-column" style="padding: 5rem 3rem; background-image: linear-gradient(135deg, rgba(0,33,71,0.9), rgba(0,33,71,1)), url('assets/images/hero-bg.png'); background-size: cover; background-blend-mode: overlay;">
+        <div class="col-lg-5 col-xl-4 text-white d-flex flex-column glass-panel" style="padding: 5rem 3rem;">
             
             <span class="d-inline-block py-2 px-3 rounded-pill bg-white bg-opacity-10 text-white fw-bold text-uppercase small mb-4 align-self-start" style="letter-spacing: 1px;">Contact Us</span>
             <h1 class="display-4 fw-bold mb-4">Let's build something <span style="color: var(--secondary-color);">extraordinary.</span></h1>
@@ -49,7 +49,7 @@
         </div>
 
         <!-- Right Side: Light Form Area -->
-        <div class="col-lg-7 col-xl-8 bg-light d-flex align-items-center justify-content-center" style="padding: 5rem 2rem; min-height: 100vh;">
+        <div class="col-lg-7 col-xl-8 d-flex align-items-center justify-content-center p-3 p-md-5" style="min-height: 100vh;">
             <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 w-100 bg-white" style="max-width: 800px;">
                 <h3 class="fw-bold mb-4 text-dark">Send us a message</h3>
 
@@ -83,8 +83,7 @@
                         </div>
                         <div class="col-12 pt-3">
                             <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill fw-bold shadow-sm w-100 w-md-auto hover-lift" [disabled]="!contactForm.form.valid || isSubmitting">
-                                <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2"></span>
-                                Send Message <i class="bi bi-send-fill ms-2"></i>
+                                Send Message
                             </button>
                         </div>
                     </div>
