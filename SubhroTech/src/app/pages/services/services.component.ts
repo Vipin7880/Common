@@ -24,6 +24,24 @@ export class ServicesComponent implements OnInit {
       desc: 'Data-driven marketing strategies to grow your brand presence online.',
       icon: 'bi-megaphone',
       features: ['Social Media Mgmt', 'PPC Campaigns', 'Content Strategy']
+    },
+    {
+      title: 'Website Management',
+      desc: 'Continuous support, updates, and maintenance for your web applications.',
+      icon: 'bi-gear-wide-connected',
+      features: ['Security Updates', 'Performance Tuning', '24/7 Monitoring']
+    },
+    {
+      title: 'UI/UX Design',
+      desc: 'Intuitive and engaging user experiences crafted by expert designers.',
+      icon: 'bi-palette',
+      features: ['Wireframing', 'Prototyping', 'User Research']
+    },
+    {
+      title: 'AI Chatbot Development',
+      desc: 'Smart, conversational AI bots that automate support and boost engagement.',
+      icon: 'bi-robot',
+      features: ['Custom AI Models', 'Web & App Integration', 'NLP Processing']
     }
   ];
 

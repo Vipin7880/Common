@@ -1,0 +1,22 @@
+.service-card {
+    transition: all 0.3s ease-in-out;
+    
+    // Smooth interaction for the specific button
+    a.service-btn {
+        transition: all 0.3s ease;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        
+        &:hover {
+            background-color: var(--secondary-color) !important;
+            border-color: var(--secondary-color) !important;
+            color: var(--primary-color) !important;
+        }
+    }
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

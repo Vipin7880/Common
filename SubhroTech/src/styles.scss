@@ -12,18 +12,26 @@ $slick-loader-path: "~slick-carousel/slick/";
 
 /* Variable Overrides (Premium Aesthetics) */
 $font-family-base: 'Outfit', sans-serif;
-$primary: #4f46e5 ;
-/* Sky 500 - Logo Blue */
+$primary: #002147;
+/* Navy */
 $secondary: #64748b;
 /* Slate 500 */
 $success: #10b981;
 /* Emerald 500 */
-$info: #4f46e5 ;
-/* Cyan 500 */
+$info: #D4AF37;
+/* Gold */
 $warning: #f59e0b;
 /* Amber 500 */
 $danger: #ef4444;
 /* Red 500 */
+
+:root {
+  --primary-color: #002147;
+  --secondary-color: #D4AF37;
+  --text-dark: #1a1a1a;
+  --text-light: #f8f9fa;
+  --bg-light: #ffffff;
+}
 $light: #f8fafc;
 /* Slate 50 */
 $dark: #0f172a;
@@ -48,26 +56,61 @@ body {
 }
 
 .btn-primary {
-  background-color: $primary !important;
-  border-color: $primary !important;
-  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.1), 0 2px 4px -1px rgba(14, 165, 233, 0.06);
+  background-color: var(--secondary-color) !important; /* Gold */
+  border-color: var(--secondary-color) !important;
+  color: var(--primary-color) !important; /* Navy text */
+  box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2), 0 2px 4px -1px rgba(212, 175, 55, 0.1);
 
   &:hover {
-    background-color: darken(#4f46e5 , 5%) !important;
-    border-color: darken(#4f46e5 , 5%) !important;
-    box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.2), 0 4px 6px -2px rgba(14, 165, 233, 0.1);
-    transform: translateY(-1px);
-    transition: all 0.2s ease-in-out;
+    background-color: lighten(#D4AF37, 10%) !important;
+    border-color: lighten(#D4AF37, 10%) !important;
+    color: var(--primary-color) !important;
+    box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
   }
+}
+
+.btn-outline-primary {
+  color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  border-width: 2px;
+
+  &:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.2);
+  }
+}
+
+.btn, .rounded-pill {
+    border-radius: 8px !important;
+    padding: 10px 30px;
+    font-weight: 500;
+}
+
+.input-group {
+    .btn {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+    .form-control {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
 }
 
 .card {
   border: none;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
+}
 
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   &:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
   }
 }
 
@@ -77,8 +120,8 @@ textarea:focus,
 select:focus,
 button:focus {
     outline: none !important;
-    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1) !important;
-    border-color: rgba(79, 70, 229, 0.3) !important;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3) !important;
+    border-color: rgba(212, 175, 55, 0.5) !important;
 }
 
 .form-control:focus {
