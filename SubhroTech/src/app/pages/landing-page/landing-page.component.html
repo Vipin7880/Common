@@ -1,174 +1,239 @@
-<!-- Hero Section -->
-<section
-    class="hero-section position-relative overflow-hidden py-4 text-white text-center d-flex align-items-center"
-    style="min-height: 70vh;">
-    <div class="container position-relative z-index-1">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-
-                <h1 class="display-3 fw-bold mb-4 lh-sm">Transforming Ideas into <br><span class="text-gradient">Digital Reality</span></h1>
-                <p class="lead text-secondary mb-5 mx-auto" style="max-width: 600px;">We provide cutting-edge software development, design, and digital strategies to scale your business.</p>
-                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                    <a routerLink="/services"
-                        class="btn btn-primary btn-lg rounded-pill fw-bold shadow-lg">Explore
-                        Services</a>
-                    <a routerLink="/verify" class="btn btn-outline-primary btn-lg rounded-pill fw-bold">Verify
-                        Certificate</a>
-                </div>
-            </div>
+<!-- Hero Section: Architectural Split -->
+<section class="hero-section py-4 py-lg-5 hairline-b position-relative">
+  <div class="container py-2 py-lg-4">
+    <div class="row align-items-center g-4 g-lg-5">
+      <!-- Left: Value Proposition -->
+      <div class="col-lg-6">
+        <div class="d-inline-flex align-items-center gap-2 mb-3">
+          <span class="status-pill">
+            <span class="status-dot"></span>
+            Independent Engineering Studio
+          </span>
         </div>
+        <h1 class="hero-title mb-3 mb-lg-4">
+          Software engineering for high-stakes web and cloud products
+        </h1>
+        <p class="hero-subtitle mb-4">
+          Subhro Tech designs, architects, and builds custom web platforms, scalable backend services, and applied AI systems. We work as dedicated engineering partners for teams that care about performance and technical craft.
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3 pt-2">
+          <a routerLink="/contact" class="btn-studio-primary text-center">
+            <span>Start a project</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <a routerLink="/services" class="btn-studio-secondary text-center">
+            <span>Explore capabilities</span>
+          </a>
+        </div>
+
+        <!-- Micro Meta Notes -->
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2 gap-sm-4 mt-4 mt-lg-5 pt-3 hairline-t text-muted font-mono small">
+          <div><i class="bi bi-shield-check text-secondary me-1"></i> Fixed-scope or sprint retainers</div>
+          <div><i class="bi bi-clock-history text-secondary me-1"></i> 2-4 week initial delivery</div>
+        </div>
+      </div>
+
+      <!-- Right: The Hero Moment (Interactive Architecture Console) -->
+      <div class="col-lg-6">
+        <div class="code-preview-terminal shadow-lg">
+          <!-- Terminal Tab Bar -->
+          <div class="code-preview-header flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-2">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #ef4444; opacity: 0.8;"></span>
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #f59e0b; opacity: 0.8;"></span>
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; opacity: 0.8;"></span>
+              <span class="text-muted ms-1 ms-sm-2 font-mono" style="font-size: 0.75rem;">subhrotech.config.ts</span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-sm text-secondary font-mono py-0 px-2" [class.text-white]="activeTab === 'overview'" [class.bg-dark]="activeTab === 'overview'" (click)="setTab('overview')">spec</button>
+              <button class="btn btn-sm text-secondary font-mono py-0 px-2" [class.text-white]="activeTab === 'stack'" [class.bg-dark]="activeTab === 'stack'" (click)="setTab('stack')">stack</button>
+              <button class="btn btn-sm text-secondary font-mono py-0 px-2" [class.text-white]="activeTab === 'benchmarks'" [class.bg-dark]="activeTab === 'benchmarks'" (click)="setTab('benchmarks')">metrics</button>
+            </div>
+          </div>
+
+          <!-- Terminal Content: Spec -->
+          <div class="p-3 p-sm-4 overflow-x-auto" *ngIf="activeTab === 'overview'">
+            <div class="text-muted mb-2 small font-mono">// Subhro Tech - Standard Architecture Specification</div>
+            <div class="text-secondary mb-3 font-mono small lh-base" style="font-size: 0.8125rem;">
+              <span class="text-warning">export const</span> <span class="text-info">ProjectSpec</span> = &#123;<br>
+              &nbsp;&nbsp;engagement: <span class="text-success">'Full-Lifecycle Engineering'</span>,<br>
+              &nbsp;&nbsp;architecture: <span class="text-success">'Distributed Modular Web App'</span>,<br>
+              &nbsp;&nbsp;codeQualitySLA: &#123;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;strictTypeScript: <span class="text-warning">true</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;lighthouseTarget: <span class="text-warning">99</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;automatedCiCd: <span class="text-warning">true</span><br>
+              &nbsp;&nbsp;&#125;,<br>
+              &nbsp;&nbsp;deployment: <span class="text-success">'Cloud Native / Docker / Edge'</span><br>
+              &#125;;
+            </div>
+            <div class="d-flex flex-wrap align-items-center justify-content-between pt-3 hairline-t small gap-2">
+              <span class="text-muted font-mono" style="font-size: 0.75rem;">Status: <span class="text-success">Production Verified</span></span>
+              <span class="text-muted font-mono" style="font-size: 0.75rem;">Build time: <span class="text-white">1.8s</span></span>
+            </div>
+          </div>
+
+          <!-- Terminal Content: Stack -->
+          <div class="p-3 p-sm-4" *ngIf="activeTab === 'stack'">
+            <div class="text-muted mb-3 small font-mono">// Core Production Stack Defaults</div>
+            <div class="d-flex flex-column gap-2 font-mono small" style="font-size: 0.8125rem;">
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center p-2 rounded bg-surface hairline-box gap-1">
+                <span class="text-white">Frontend</span>
+                <span class="text-warning">Angular 17 / Standalone</span>
+              </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center p-2 rounded bg-surface hairline-box gap-1">
+                <span class="text-white">Runtime & API</span>
+                <span class="text-info">Node.js 20+ / Clean REST</span>
+              </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center p-2 rounded bg-surface hairline-box gap-1">
+                <span class="text-white">Data Store</span>
+                <span class="text-success">PostgreSQL / Encrypted</span>
+              </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center p-2 rounded bg-surface hairline-box gap-1">
+                <span class="text-white">DevOps</span>
+                <span class="text-secondary">Docker / CI/CD Actions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terminal Content: Benchmarks -->
+          <div class="p-3 p-sm-4" *ngIf="activeTab === 'benchmarks'">
+            <div class="text-muted mb-3 small font-mono">// Measured Performance Benchmarks</div>
+            <div class="row g-2 g-sm-3">
+              <div class="col-6">
+                <div class="p-2 p-sm-3 rounded bg-surface hairline-box text-center">
+                  <div class="fs-4 fs-sm-3 fw-bold text-success font-mono">99/100</div>
+                  <div class="text-muted small mt-1 font-mono" style="font-size: 0.75rem;">Lighthouse</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-2 p-sm-3 rounded bg-surface hairline-box text-center">
+                  <div class="fs-4 fs-sm-3 fw-bold text-info font-mono">&lt; 320ms</div>
+                  <div class="text-muted small mt-1 font-mono" style="font-size: 0.75rem;">Global TTFB</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-2 p-sm-3 rounded bg-surface hairline-box text-center">
+                  <div class="fs-4 fs-sm-3 fw-bold text-warning font-mono">0.00s</div>
+                  <div class="text-muted small mt-1 font-mono" style="font-size: 0.75rem;">CLS Shift</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-2 p-sm-3 rounded bg-surface hairline-box text-center">
+                  <div class="fs-4 fs-sm-3 fw-bold text-white font-mono">A+</div>
+                  <div class="text-muted small mt-1 font-mono" style="font-size: 0.75rem;">SSL Security</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <!-- Decorative background elements could go here -->
+  </div>
 </section>
 
-<!-- Stats Section -->
-<section class="py-4 bg-white border-bottom">
-    <div class="container">
-        <div class="row text-center g-4">
-            <div class="col-md-4">
-                <h2 class="display-4 fw-bold text-primary mb-0" [appCountUp]="clientCount" [duration]="2000">0+</h2>
-                <p class="text-secondary mb-0">Happy Clients</p>
-            </div>
-            <div class="col-md-4">
-                <h2 class="display-4 fw-bold text-primary mb-0" [appCountUp]="partnerCount" [duration]="2500">0+</h2>
-                <p class="text-secondary mb-0">Global Partners</p>
-            </div>
-            <div class="col-md-4">
-                <h2 class="display-4 fw-bold text-primary mb-0" [appCountUp]="projectCount" [duration]="3000">0+</h2>
-                <p class="text-secondary mb-0">Projects Delivered</p>
-            </div>
+<!-- Section: Engineering Metrics (Enhanced Hairline Grid) -->
+<section class="py-5 hairline-b bg-surface">
+  <div class="container">
+    <div class="hairline-metric-grid">
+      <div class="row g-0">
+        <div class="col-lg-3 col-6 p-4 p-md-4 hairline-r hairline-b" [class.border-bottom-0]="i >= 2" *ngFor="let metric of metrics; let i = index">
+          <div class="metric-number font-mono mb-1">{{ metric.value }}</div>
+          <div class="fw-semibold text-white mb-1 small">{{ metric.label }}</div>
+          <div class="text-muted small" style="font-size: 0.75rem;">{{ metric.detail }}</div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Trust Section (Bento Box) -->
-<section class="py-5 bg-white overflow-hidden">
-    <div class="container">
-        <div class="text-center pb-3">
-            <h3 class="fw-bold text-dark">Why Choose Subhro Tech?</h3>
-        </div>
-
-        <div class="row g-4">
-            <!-- Bento Item 1: Large (Left) -->
-            <div class="col-lg-8">
-                <div class="card h-100 border-0 rounded-4 overflow-hidden shadow-sm position-relative">
-                    <div class="row g-0 h-100 position-relative z-index-1">
-                        <div class="col-md-7 p-4 p-md-5 d-flex flex-column justify-content-center text-white">
-                            <div class="mb-4">
-                                <i class="bi bi-rocket-takeoff-fill fs-1 text-warning"></i>
-                            </div>
-                            <h3 class="fw-bold mb-3 display-6">Proven Track Record</h3>
-                            <p class="text-white-50 mb-0 fs-5">We have successfully delivered robust, highly scalable software solutions for leading global enterprises, directly driving their bottom-line growth.</p>
-                        </div>
-                        <div class="col-md-5 d-none d-md-block h-100 position-relative">
-                            <img src="assets/images/bento-graphic.png" alt="Data Visualization" class="position-absolute top-0 end-0 h-100 w-100" style="object-fit: cover; opacity: 0.8; mask-image: linear-gradient(to right, transparent, black 40%); -webkit-mask-image: linear-gradient(to right, transparent, black 40%);">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bento Item 2: Medium (Top Right) -->
-            <div class="col-lg-4">
-                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 p-md-5 bg-light text-center d-flex flex-column justify-content-center transition-all hover-lift">
-                    <div class="mb-4 mx-auto rounded-circle bg-white text-primary d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px;">
-                        <i class="bi bi-lightning-fill fs-2"></i>
-                    </div>
-                    <h4 class="fw-bold mb-3">Agile & Fast Delivery</h4>
-                    <p class="text-secondary mb-0">Our streamlined agile process ensures rapid iteration and lightning-fast time-to-market.</p>
-                </div>
-            </div>
-
-            <!-- Bento Item 3: Medium (Bottom Left) -->
-            <div class="col-lg-4">
-                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 p-md-5 bg-light text-center d-flex flex-column justify-content-center transition-all hover-lift">
-                    <div class="mb-4 mx-auto rounded-circle bg-white text-primary d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px;">
-                        <i class="bi bi-headset fs-2"></i>
-                    </div>
-                    <h4 class="fw-bold mb-3">24/7 Dedicated Support</h4>
-                    <p class="text-secondary mb-0">We offer round-the-clock maintenance to keep your digital operations flawless.</p>
-                </div>
-            </div>
-
-            <!-- Bento Item 4: Wide (Bottom Right) -->
-            <div class="col-lg-8">
-                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 p-md-5 d-flex flex-column flex-md-row align-items-center justify-content-between">
-                    <div class="text-primary mb-4 mb-md-0 pe-md-4 text-center text-md-start" style="border-right: 2px solid rgba(212, 175, 55, 0.3);">
-                        <h2 class="display-2 fw-bold mb-0 lh-1" style="color: var(--secondary-color);">4.9<span class="fs-4">/5</span></h2>
-                        <div class="d-flex justify-content-center justify-content-md-start fs-5 mt-2" style="color: var(--secondary-color);">
-                            <i class="bi bi-star-fill me-1"></i>
-                            <i class="bi bi-star-fill me-1"></i>
-                            <i class="bi bi-star-fill me-1"></i>
-                            <i class="bi bi-star-fill me-1"></i>
-                            <i class="bi bi-star-half"></i>
-                        </div>
-                    </div>
-                    <div class="ps-md-4 text-center text-md-start text-primary">
-                        <h3 class="fw-bold mb-2">Unmatched Client Satisfaction</h3>
-                        <p class="mb-0 opacity-75 fw-medium">Based on 200+ verified client reviews. We don't just build software; we build lasting technical partnerships.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+<!-- Section: Core Capabilities Grid -->
+<section class="py-4 py-lg-5 hairline-b">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3 pb-3 hairline-b">
+      <div>
+        <div class="font-mono text-uppercase small text-muted mb-2" style="letter-spacing: 0.05em;">Engineering Disciplines</div>
+        <h2 class="display-6 fw-bold mb-0">What we build and maintain</h2>
+      </div>
+      <div>
+        <a routerLink="/services" class="text-secondary text-decoration-none small font-mono hover-white">
+          View full capabilities specification <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
     </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6 col-12" *ngFor="let d of disciplines">
+        <div class="studio-card h-100 d-flex flex-column justify-content-between p-3 p-sm-4 p-md-5">
+          <div>
+            <div class="font-mono text-muted small mb-2" style="font-size: 0.75rem;">{{ d.category }}</div>
+            <h3 class="fs-4 fw-semibold text-white mb-2">{{ d.title }}</h3>
+            <p class="text-secondary small mb-4 lh-base">{{ d.description }}</p>
+          </div>
+          <div class="d-flex flex-wrap gap-2 pt-3 hairline-t">
+            <span class="font-mono small py-1 px-2 rounded bg-dark text-muted hairline-box" *ngFor="let item of d.stack" style="font-size: 0.75rem;">
+              {{ item }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- How it Works (Timeline) -->
-<section class="pt-2 pb-5 bg-light position-relative">
-    <div class="container position-relative z-index-1">
-        <div class="text-center mb-4">
-            <span class="d-inline-block py-2 px-3 rounded-pill bg-primary bg-opacity-10 text-primary fw-bold text-uppercase small mb-3" style="letter-spacing: 1px;">Process</span>
-            <h2 class="display-5 fw-bold text-dark lh-base">How We Work</h2>
-        </div>
-
-        <div class="row g-4 position-relative">
-            <!-- Connecting Line for Desktop -->
-            <div class="position-absolute top-50 start-0 w-100 border-top border-2 border-primary border-opacity-25 d-none d-lg-block z-index-0" style="transform: translateY(-50%);"></div>
-
-            <!-- Step 1 -->
-            <div class="col-lg-4 z-index-1">
-                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 p-md-5 text-center position-relative overflow-hidden hover-lift bg-white">
-                 
-                    <div class="mb-4 position-relative z-index-2">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle shadow-sm" style="width: 70px; height: 70px;">
-                            <i class="bi bi-chat-dots fs-3"></i>
-                        </div>
-                    </div>
-                    <h4 class="fw-bold mb-3 position-relative z-index-2">Consultation & Strategy</h4>
-                    <p class="text-secondary mb-0 position-relative z-index-2">We analyze your business needs and craft a tailored digital strategy. No obligations.</p>
-                </div>
-            </div>
-            
-            <!-- Step 2 -->
-            <div class="col-lg-4 z-index-1">
-                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 p-md-5 text-center position-relative overflow-hidden hover-lift bg-white">
-                  
-                    <div class="mb-4 position-relative z-index-2">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle shadow-sm" style="width: 70px; height: 70px;">
-                            <i class="bi bi-laptop fs-3"></i>
-                        </div>
-                    </div>
-                    <h4 class="fw-bold mb-3 position-relative z-index-2">Design & Development</h4>
-                    <p class="text-secondary mb-0 position-relative z-index-2">Our team builds scalable, high-performance solutions tailored to your unique requirements.</p>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="col-lg-4 z-index-1">
-                <div class="card h-100 border-0 rounded-4 shadow-sm p-4 p-md-5 text-center position-relative overflow-hidden hover-lift bg-white">
-                    <div class="mb-4 position-relative z-index-2">
-                        <div class="d-inline-flex align-items-center justify-content-center text-white rounded-circle shadow-sm" style="width: 70px; height: 70px; background-color: var(--secondary-color) !important;">
-                            <i class="bi bi-rocket-takeoff fs-3"></i>
-                        </div>
-                    </div>
-                    <h4 class="fw-bold mb-3 position-relative z-index-2">Delivery & Support</h4>
-                    <p class="text-secondary mb-0 position-relative z-index-2">We ensure a smooth launch, provide continuous maintenance, and scale with your growth.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-5 pt-3">
-            <a routerLink="/services" class="btn btn-primary rounded-pill shadow-sm">Explore Our Services <i class="bi bi-arrow-right ms-1"></i></a>
-        </div>
+<!-- Section: Delivery Protocol (Runbook with Enhanced Hairline Frame) -->
+<section class="py-4 py-lg-5 hairline-b bg-surface">
+  <div class="container">
+    <div class="text-center mb-4" style="max-width: 600px; margin: 0 auto;">
+      <div class="font-mono text-uppercase small text-muted mb-2" style="letter-spacing: 0.05em;">Delivery Protocol</div>
+      <h2 class="display-6 fw-bold mb-2">Structured, zero-drama execution</h2>
+      <p class="text-secondary small mb-0">Every project follows a documented technical lifecycle with clear milestones, weekly staging previews, and zero surprise handoffs.</p>
     </div>
+
+    <div class="hairline-frame bg-deep overflow-hidden">
+      <div class="row g-0">
+        <div class="col-lg-4 col-12 p-3 p-sm-4 p-md-5 hairline-r hairline-b">
+          <div class="font-mono text-muted mb-3 fs-5">01 // Specification</div>
+          <h4 class="fw-semibold text-white fs-5 mb-2">Architecture & Technical PRD</h4>
+          <p class="text-secondary small mb-0 lh-base">
+            We define data schemas, API contracts, deployment requirements, and UX wireframes before writing code. You sign off on exact scope.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-12 p-3 p-sm-4 p-md-5 hairline-r hairline-b">
+          <div class="font-mono text-muted mb-3 fs-5">02 // Implementation</div>
+          <h4 class="fw-semibold text-white fs-5 mb-2">Continuous Sprint Delivery</h4>
+          <p class="text-secondary small mb-0 lh-base">
+            Bi-weekly sprints with active staging builds. You test live functionality on private preview URLs with strict TypeScript code reviews.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-12 p-3 p-sm-4 p-md-5">
+          <div class="font-mono text-muted mb-3 fs-5">03 // Deployment</div>
+          <h4 class="fw-semibold text-white fs-5 mb-2">Production Cutover & SLA</h4>
+          <p class="text-secondary small mb-0 lh-base">
+            Dockerized container deployment, automated SSL, performance benchmarks, and 24/7 uptime monitoring for dependable operations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section: Direct Engagement CTA -->
+<section class="py-4 py-lg-5">
+  <div class="container">
+    <div class="hairline-frame bg-surface p-3 p-sm-4 p-md-5 text-center" style="max-width: 840px; margin: 0 auto;">
+      <h2 class="display-6 fw-bold mb-3 text-white">Have a technical project in mind?</h2>
+      <p class="text-secondary mb-4 mx-auto small" style="max-width: 560px;">
+        Tell us about your product goals, timeline, and architectural requirements. We respond with a practical technical proposal within 24 hours.
+      </p>
+      <div class="d-flex justify-content-center">
+        <a routerLink="/contact" class="btn-studio-primary w-100 w-sm-auto">
+          <span>Start a project conversation</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>

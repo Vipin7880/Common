@@ -1,0 +1,42 @@
+.hero-section {
+  background-color: var(--bg-canvas);
+}
+
+.hero-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.metric-number {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.bg-surface {
+  background-color: var(--bg-surface);
+}
+
+.hover-white {
+  transition: color 0.15s ease;
+  &:hover {
+    color: var(--text-primary) !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .w-sm-auto {
+    width: auto !important;
+  }
+}

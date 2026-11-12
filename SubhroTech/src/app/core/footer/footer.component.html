@@ -1,55 +1,66 @@
-<footer class="text-white pt-5 pb-4 mt-auto glass-panel">
-    <div class="container pt-4">
-        <div class="row g-5 mb-5">
-            <!-- Column 1: Brand -->
-            <div class="col-lg-4 col-md-6 pe-lg-5">
-                <h5 class="fw-bold mb-4 text-white d-flex align-items-center">
-                    <img src="assets/logo.png" alt="Logo" height="35" class="me-2 bg-white rounded p-1">
-                    Subhro <span style="color: var(--secondary-color);" class="ms-1">Tech</span>
-                </h5>
-                <p class="text-white-50 lh-lg mb-4">Empowering ambitious businesses through cutting-edge software development, scalable architectures, and transformative digital strategies.</p>
-                <div class="d-flex gap-3">
-                    <a href="#" class="bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none hover-lift" style="width: 40px; height: 40px; transition: all 0.3s;"><i class="bi bi-linkedin fs-5"></i></a>
-                    <a href="#" class="bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none hover-lift" style="width: 40px; height: 40px; transition: all 0.3s;"><i class="bi bi-twitter fs-5"></i></a>
-                    <a href="#" class="bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none hover-lift" style="width: 40px; height: 40px; transition: all 0.3s;"><i class="bi bi-github fs-5"></i></a>
-                </div>
-            </div>
-            
-            <!-- Column 2: Quick Links -->
-            <div class="col-lg-2 col-md-6">
-                <h6 class="fw-bold mb-4 text-white text-uppercase letter-spacing-1 small">Company</h6>
-                <ul class="list-unstyled mb-0">
-                    <li class="mb-3"><a routerLink="/about" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">About Us</a></li>
-                    <li class="mb-3"><a routerLink="/services" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Our Services</a></li>
-                    <li class="mb-3"><a routerLink="/contact" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <!-- Column 3: Legal -->
-            <div class="col-lg-2 col-md-6">
-                <h6 class="fw-bold mb-4 text-white text-uppercase letter-spacing-1 small">Legal</h6>
-                <ul class="list-unstyled mb-0">
-                    <li class="mb-3"><a routerLink="/terms" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Terms of Service</a></li>
-                    <li class="mb-3"><a routerLink="/refunds" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Refund Policy</a></li>
-                    <li class="mb-3"><a routerLink="/privacy" class="text-decoration-none text-white-50 hover-text-white" style="transition: color 0.2s;">Privacy Policy</a></li>
-                </ul>
-            </div>
-            
-            <!-- Column 4: Newsletter -->
-            <div class="col-lg-4 col-md-6">
-                <h6 class="fw-bold mb-4 text-white text-uppercase letter-spacing-1 small">Newsletter</h6>
-                <p class="text-white-50 mb-4">Subscribe to our newsletter for the latest tech insights and company updates.</p>
-                <div class="input-group shadow-sm" style="height: 50px;">
-                    <input type="email" class="form-control border-0 px-4 text-white" style="background-color: rgba(255,255,255,0.1);" placeholder="Email address" aria-label="Email address" [(ngModel)]="email">
-                    <button class="btn px-4 fw-bold text-dark" type="button" (click)="subscribe()" style="background-color: var(--secondary-color) !important; border: none;">Subscribe</button>
-                </div>
-            </div>
+<footer class="studio-footer hairline-t mt-auto">
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- Column 1: Brand & Studio Philosophy -->
+      <div class="col-lg-4 pe-lg-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="assets/logo.png" alt="Subhro Tech Engineering Studio Logo" width="28" height="28" class="rounded">
+          <span class="fw-semibold text-white fs-5">Subhro Tech</span>
         </div>
-        
-        <!-- Bottom Copyright -->
-        <div class="pt-4 border-top border-light border-opacity-10 text-center text-md-start d-md-flex justify-content-between align-items-center">
-            <p class="mb-0 text-white-50 small">&copy; 2026 Subhro Tech. All rights reserved.</p>
-            <p class="mb-0 text-white-50 small mt-2 mt-md-0">GSTIN: <span class="text-white fw-medium">19EFMPM7781H1ZM</span></p>
+        <p class="footer-brand-desc text-secondary mb-4">
+          Bespoke software engineering studio delivering scalable web architectures, custom cloud applications, and AI integrations for growing businesses.
+        </p>
+        <div class="d-flex align-items-center gap-2 font-mono small text-muted">
+          <span class="status-dot" style="width: 6px; height: 6px; border-radius: 50%; background: var(--status-green);"></span>
+          <span>Deploying from West Bengal, India</span>
         </div>
+      </div>
+
+      <!-- Column 2: Capabilities -->
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-heading">Capabilities</h6>
+        <ul class="footer-nav-list">
+          <li><a routerLink="/services">Web Applications</a></li>
+          <li><a routerLink="/services">Mobile Platforms</a></li>
+          <li><a routerLink="/services">Cloud Infrastructure</a></li>
+          <li><a routerLink="/services">AI Automation</a></li>
+          <li><a routerLink="/services">UI/UX Systems</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company & Governance -->
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-heading">Company</h6>
+        <ul class="footer-nav-list">
+          <li><a routerLink="/about">About Studio</a></li>
+          <li><a routerLink="/contact">Direct Inquiries</a></li>
+          <li><a routerLink="/terms">Terms of Service</a></li>
+          <li><a routerLink="/privacy">Privacy Policy</a></li>
+          <li><a routerLink="/refunds">Billing & Refunds</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Engineering Dispatch (Newsletter) -->
+      <div class="col-lg-4">
+        <h6 class="footer-heading">Engineering Dispatch</h6>
+        <p class="footer-dispatch-desc text-secondary mb-3">Subscribe to occasional technical notes on architecture, performance, and engineering practices.</p>
+        <div class="d-flex flex-column flex-sm-row gap-2">
+          <input type="email" class="form-control studio-input flex-grow-1" placeholder="e.g. rahul.sharma@company.in" [(ngModel)]="email">
+          <button class="btn-studio-secondary" type="button" (click)="subscribe()">Subscribe</button>
+        </div>
+        <p class="font-mono text-muted small mt-2" style="font-size: 0.8125rem;">No marketing noise. Unsubscribe at any time.</p>
+      </div>
     </div>
+
+    <!-- Bottom Row: Meta & Legal -->
+    <div class="hairline-t pt-4 mt-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 footer-meta">
+      <div class="text-muted font-mono">
+        &copy; 2026 Subhro Tech. All rights reserved.
+      </div>
+      <div class="d-flex align-items-center gap-4 text-muted font-mono">
+        <span>GSTIN: <span class="text-secondary">19EFMPM7781H1ZM</span></span>
+        <span>HSN: <span class="text-secondary">998313</span></span>
+      </div>
+    </div>
+  </div>
 </footer>

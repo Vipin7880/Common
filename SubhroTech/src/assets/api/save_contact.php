@@ -44,12 +44,16 @@ if ($data && !empty($data['email']) && !empty($data['message'])) {
     fputcsv($fp, $row);
     fclose($fp);
 
-    // Send Contact Emails
-    require_once __DIR__ . '/mailer.php';
-    sendContactEmail($data['email'], $data['name'], [
-        'subject' => $data['subject'] ?? 'No Subject',
-        'message' => $data['message']
-    ]);
+    // Send Contact Emails if mailer configured
+    if (file_exists(__DIR__ . '/mailer.php')) {
+        require_once __DIR__ . '/mailer.php';
+        if (function_exists('sendContactEmail')) {
+            sendContactEmail($data['email'], $data['name'], [
+                'subject' => $data['subject'] ?? 'No Subject',
+                'message' => $data['message']
+            ]);
+        }
+    }
 
     http_response_code(200);
     echo json_encode(["message" => "Query received"]);

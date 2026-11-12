@@ -1,32 +1,55 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './pages/landing-page/landing-page.component';
-import { DomainDirectoryComponent } from './pages/domain-directory/domain-directory.component';
-import { DomainDetailComponent } from './pages/domain-detail/domain-detail.component';
-import { VerificationComponent } from './pages/verification/verification.component';
-import { ServicesComponent } from './pages/services/services.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { TermsComponent } from './pages/terms/terms.component';
-import { RefundsComponent } from './pages/refunds/refunds.component';
-import { CheckoutComponent } from './pages/checkout/checkout.component';
-import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'domains', component: DomainDirectoryComponent },
-  { path: 'internship/:id', component: DomainDetailComponent },
-  { path: 'verify', component: VerificationComponent },
-  { path: 'verify/:id', component: VerificationComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'about', component: AboutUsComponent },
-  { path: 'contact', component: ContactUsComponent },
-  { path: 'terms', component: TermsComponent },
-  { path: 'refunds', component: RefundsComponent },
-  { path: 'checkout', component: CheckoutComponent },
-  { path: 'privacy', component: PrivacyComponent },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '',
+    title: 'Subhro Tech | Software Engineering & Web Architecture Studio',
+    loadComponent: () =>
+      import('./pages/landing-page/landing-page.component').then(m => m.LandingPageComponent)
+  },
+  {
+    path: 'services',
+    title: 'Engineering Capabilities & Technical Services | Subhro Tech',
+    loadComponent: () =>
+      import('./pages/services/services.component').then(m => m.ServicesComponent)
+  },
+  {
+    path: 'about',
+    title: 'About the Studio | Subhro Tech Engineering Practice',
+    loadComponent: () =>
+      import('./pages/about-us/about-us.component').then(m => m.AboutUsComponent)
+  },
+  {
+    path: 'contact',
+    title: 'Contact Subhro Tech | Initiate Technical Consultation & Project Inquiry',
+    loadComponent: () =>
+      import('./pages/contact-us/contact-us.component').then(m => m.ContactUsComponent)
+  },
+  {
+    path: 'terms',
+    title: 'Terms of Service | Subhro Tech Software Engagements',
+    loadComponent: () =>
+      import('./pages/terms/terms.component').then(m => m.TermsComponent)
+  },
+  {
+    path: 'refunds',
+    title: 'Billing & Refund Policy | Subhro Tech Commercial Terms',
+    loadComponent: () =>
+      import('./pages/refunds/refunds.component').then(m => m.RefundsComponent)
+  },
+  {
+    path: 'privacy',
+    title: 'Privacy Policy & Data Security | Subhro Tech',
+    loadComponent: () =>
+      import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent)
+  },
+  {
+    path: '**',
+    title: '404 - Page Not Found | Subhro Tech',
+    loadComponent: () =>
+      import('./pages/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)
+  }
 ];
 
 @NgModule({

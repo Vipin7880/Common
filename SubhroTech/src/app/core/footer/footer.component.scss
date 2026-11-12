@@ -1,9 +1,53 @@
-.hover-text-primary:hover {
-    color: var(--bs-primary) !important;
-    transition: color 0.2s ease;
-}
+.studio-footer {
+  background-color: var(--bg-deep);
 
-.hover-text-white:hover {
-    color: #fff !important;
-    transition: color 0.2s ease;
+  .footer-brand-desc {
+    font-size: 0.9375rem; /* ~15px, up 1px */
+    line-height: 1.68;
+    max-width: 340px;
+  }
+
+  .footer-heading {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem; /* ~13px, up 1px */
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* increased line gap between li items */
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      line-height: 1.5;
+
+      a {
+        font-size: 0.9375rem; /* ~15px, up 1px from 13.5px/14px */
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.15s ease, transform 0.15s ease;
+        display: inline-block;
+
+        &:hover {
+          color: #ffffff;
+          transform: translateX(2px);
+        }
+      }
+    }
+  }
+
+  .footer-dispatch-desc {
+    font-size: 0.9375rem; /* ~15px, up 1px */
+    line-height: 1.65;
+  }
+
+  .footer-meta {
+    font-size: 0.875rem; /* ~14px, up 1px */
+  }
 }

@@ -1,8 +1,9 @@
 import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
-import { animationFrameScheduler, BehaviorSubject, combineLatest, distinctUntilChanged, endWith, interval, map, switchMap, takeWhile } from 'rxjs';
+import { interval, map, takeWhile } from 'rxjs';
 
 @Directive({
-  selector: '[appCountUp]'
+  selector: '[appCountUp]',
+  standalone: true
 })
 export class CountUpDirective implements OnInit {
   @Input('appCountUp') countTo: number = 0;
@@ -24,7 +25,7 @@ export class CountUpDirective implements OnInit {
       takeWhile(i => i <= totalFrames),
       map(i => Math.round(this.easeOutQuad(i, start, end - start, totalFrames)))
     ).subscribe(current => {
-      this.renderer.setProperty(this.el.nativeElement, 'innerHTML', current + '+'); // Append + here or handle via input
+      this.renderer.setProperty(this.el.nativeElement, 'innerHTML', current + '+');
     });
   }
 

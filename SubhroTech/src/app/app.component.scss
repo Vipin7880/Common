@@ -1,7 +1,6 @@
-:root {
-  --primary-color: #002147;
-  --secondary-color: #D4AF37;
-  --text-dark: #1a1a1a;
-  --text-light: #f8f9fa;
-  --bg-light: #ffffff;
+/* App root structural container */
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
 }

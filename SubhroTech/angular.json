@@ -26,7 +26,9 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/.htaccess"
+              "src/.htaccess",
+              "src/robots.txt",
+              "src/sitemap.xml"
             ],
             "allowedCommonJsDependencies": [
               "bootstrap",
@@ -64,7 +66,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "namedChunks": false
             },
             "development": {
               "buildOptimizer": false,
@@ -81,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "internship-portal:build:production"
+              "buildTarget": "internship-portal:build:production"
             },
             "development": {
-              "browserTarget": "internship-portal:build:development"
+              "buildTarget": "internship-portal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,7 +95,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "internship-portal:build"
+            "buildTarget": "internship-portal:build"
           }
         },
         "test": {
@@ -116,6 +119,11 @@
           }
         }
       }
+    }
+  },
+  "cli": {
+    "cache": {
+      "enabled": false
     }
   }
 }

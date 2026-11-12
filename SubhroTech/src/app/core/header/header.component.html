@@ -1,39 +1,84 @@
-<header class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm glass-panel">
-    <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" routerLink="/" (click)="closeMenu()">
-            <img src="assets/logo.png" alt="Subhro Tech Logo" height="40" class="d-inline-block align-text-top">
-            <span class="text-white">Subhro Tech</span>
-        </a>
-        <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="!isMenuCollapsed"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" [class.show]="!isMenuCollapsed" id="navbarNav">
-            <ul class="navbar-nav gap-lg-3">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/services" routerLinkActive="active"
-                        (click)="closeMenu()">Services</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/contact" routerLinkActive="active"
-                        (click)="closeMenu()">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/verify" routerLinkActive="active" (click)="closeMenu()">Verify
-                        Certificate</a>
-                </li>
-            </ul>
-            <div class="ms-lg-3 mt-2 mt-lg-0">
-                <a class="btn btn-primary rounded-pill px-4" routerLink="/services" (click)="closeMenu()">Explore Services</a>
-            </div>
-        </div>
+<header class="studio-header sticky-top">
+  <div class="container d-flex align-items-center justify-content-between h-100">
+    <!-- Brand -->
+    <div class="d-flex align-items-center">
+      <a class="brand-link d-flex align-items-center gap-2 text-decoration-none" routerLink="/" (click)="closeMenu()">
+        <img src="assets/logo.png" alt="Subhro Tech Engineering Studio" width="32" height="32" class="rounded">
+        <span class="brand-name">Subhro Tech</span>
+      </a>
     </div>
+
+    <!-- Modern Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle d-lg-none" type="button" (click)="toggleMenu()"
+      [attr.aria-expanded]="!isMenuCollapsed" aria-label="Toggle navigation menu">
+      <span class="toggle-bar bar-1" [class.open]="!isMenuCollapsed"></span>
+      <span class="toggle-bar bar-2" [class.open]="!isMenuCollapsed"></span>
+      <span class="toggle-bar bar-3" [class.open]="!isMenuCollapsed"></span>
+    </button>
+
+    <!-- Desktop & Mobile Navigation -->
+    <nav class="studio-nav" [class.show-mobile]="!isMenuCollapsed">
+      <ul class="nav-links list-unstyled d-flex flex-column flex-lg-row align-items-lg-center mb-0 gap-lg-4 gap-0">
+        <li class="mobile-nav-item">
+          <a class="nav-item-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+            <span class="d-lg-none nav-index font-mono">01 //</span>
+            <span class="nav-title">Home</span>
+            <svg class="d-lg-none nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="nav-item-link" routerLink="/services" routerLinkActive="active" (click)="closeMenu()">
+            <span class="d-lg-none nav-index font-mono">02 //</span>
+            <span class="nav-title">Services</span>
+            <svg class="d-lg-none nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="nav-item-link" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
+            <span class="d-lg-none nav-index font-mono">03 //</span>
+            <span class="nav-title">About</span>
+            <svg class="d-lg-none nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="nav-item-link" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+            <span class="d-lg-none nav-index font-mono">04 //</span>
+            <span class="nav-title">Contact</span>
+            <svg class="d-lg-none nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <!-- CTA on Desktop / Expanded Footer on Mobile -->
+      <div class="nav-cta mt-4 mt-lg-0 ms-lg-4">
+        <a class="btn-studio-primary w-100" routerLink="/contact" (click)="closeMenu()">
+          <span>Initiate Project</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Operational Metadata Footer -->
+        <div class="d-lg-none mt-3 pt-3 hairline-t d-flex align-items-center justify-content-between font-mono text-muted" style="font-size: 0.75rem;">
+          <div class="d-flex align-items-center gap-2">
+            <span class="status-dot" style="width: 6px; height: 6px; border-radius: 50%; background: var(--status-green);"></span>
+            <span>Studio Active</span>
+          </div>
+          <span>Burnpur, WB, IN</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="mobile-nav-backdrop d-lg-none" [class.show]="!isMenuCollapsed" (click)="closeMenu()"></div>
 </header>

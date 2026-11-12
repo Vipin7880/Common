@@ -1,42 +1,113 @@
-<div class="pt-5 pb-5">
-    <div class="container pt-4">
-        <div class="row align-items-end mb-4">
-            <div class="col-lg-8">
-                <span class="d-inline-block py-2 px-3 rounded-pill bg-white bg-opacity-10 text-white fw-bold text-uppercase small mb-3" style="letter-spacing: 1px;">Expertise</span>
-                <h1 class="display-4 fw-bold text-white mb-3">Our <span style="color: var(--secondary-color);">Services</span></h1>
-                <p class="text-white-50 lead mb-0" style="max-width: 600px;">Helping ambitious businesses transform with cutting-edge technology, scalable architectures, and digital strategies.</p>
-            </div>
-        </div>
+<div class="page-header-banner">
+  <div class="container">
+    <div class="page-header-content">
+      <span class="status-pill">
+        <span class="status-dot"></span>
+        Engineering Capabilities
+      </span>
+      <h1 class="page-title">Core technical capabilities</h1>
+      <p class="page-lead">
+        From complex web platforms to cloud infrastructure and applied AI workflows, we deliver reliable, maintainable codebases designed for longevity.
+      </p>
     </div>
+  </div>
 </div>
 
-<div class="container py-5 mt-2">
-    <div class="row g-4 row-cols-1 row-cols-lg-2 row-cols-xl-3">
-        <div class="col" *ngFor="let service of services">
-            <div class="service-card card h-100 border-0 rounded-4 shadow-sm p-4 hover-lift position-relative overflow-hidden bg-white d-flex flex-column">
-                
-                <!-- Decorative background shape -->
-                <div class="position-absolute top-0 end-0 bg-light opacity-50" style="width: 150px; height: 150px; transform: translate(30%, -30%); border-radius: 50%; pointer-events: none;"></div>
-                
-                <div class="d-flex align-items-center mb-4 position-relative z-index-1">
-                    <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-3 shadow-sm flex-shrink-0 me-3" style="width: 60px; height: 60px;">
-                        <i class="bi {{service.icon}} fs-3"></i>
-                    </div>
-                    <h3 class="fw-bold fs-4 mb-0 text-dark">{{service.title}}</h3>
-                </div>
-                
-                <p class="text-secondary mb-4 position-relative z-index-1 flex-grow-1">{{service.desc}}</p>
-                
-                <div class="d-flex flex-wrap gap-2 mb-4 position-relative z-index-1">
-                    <span class="badge bg-light text-dark fw-medium border px-3 py-2 rounded-pill" *ngFor="let feature of service.features">
-                        {{feature}}
-                    </span>
-                </div>
-                
-                <div class="mt-auto position-relative z-index-1">
-                    <a routerLink="/contact" class="btn btn-outline-primary w-100 rounded-pill fw-bold service-btn">Consult with us <i class="bi bi-arrow-right ms-1"></i></a>
-                </div>
+<div class="container page-content-section">
+  <div class="row g-4">
+    <!-- 3 Cards in a row on Desktop (col-lg-4), 2 on Tablet (col-md-6), 1 on Mobile (col-12) -->
+    <div class="col-lg-4 col-md-6 col-12" *ngFor="let service of services">
+      <div class="studio-card h-100 d-flex flex-column justify-content-between p-3 p-sm-4">
+        <div>
+          <div class="d-flex align-items-center justify-content-between mb-3 pb-3 hairline-b">
+            <div class="service-icon-box">
+              <ng-container [ngSwitch]="service.iconKey">
+                <!-- Website Development -->
+                <svg *ngSwitchCase="'web-dev'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="15" rx="2"></rect>
+                  <line x1="2" y1="8" x2="22" y2="8"></line>
+                  <circle cx="5" cy="5.5" r="0.8" fill="currentColor"></circle>
+                  <circle cx="8" cy="5.5" r="0.8" fill="currentColor"></circle>
+                  <circle cx="11" cy="5.5" r="0.8" fill="currentColor"></circle>
+                  <path d="M8 21h8"></path>
+                  <path d="M12 18v3"></path>
+                </svg>
+
+                <!-- App Development -->
+                <svg *ngSwitchCase="'app-dev'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="3"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  <line x1="9" y1="5" x2="15" y2="5"></line>
+                </svg>
+
+                <!-- Digital Marketing -->
+                <svg *ngSwitchCase="'marketing'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 7l-8.5 8.5-5-5L2 17"></path>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+
+                <!-- Website Management -->
+                <svg *ngSwitchCase="'sys-management'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="7" rx="2"></rect>
+                  <rect x="2" y="14" width="20" height="7" rx="2"></rect>
+                  <line x1="6" y1="6.5" x2="6.01" y2="6.5"></line>
+                  <line x1="6" y1="17.5" x2="6.01" y2="17.5"></line>
+                  <line x1="10" y1="6.5" x2="14" y2="6.5"></line>
+                  <line x1="10" y1="17.5" x2="14" y2="17.5"></line>
+                  <circle cx="18" cy="6.5" r="1" fill="currentColor"></circle>
+                  <circle cx="18" cy="17.5" r="1" fill="currentColor"></circle>
+                </svg>
+
+                <!-- UI/UX Design -->
+                <svg *ngSwitchCase="'ui-ux'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                  <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+
+                <!-- AI Chatbot Development -->
+                <svg *ngSwitchCase="'ai-bot'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+                  <rect x="9" y="9" width="6" height="6" rx="1"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="15" x2="23" y2="15"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="15" x2="4" y2="15"></line>
+                </svg>
+              </ng-container>
             </div>
+            <span class="font-mono text-muted small" style="font-size: 0.75rem;">Full-Lifecycle</span>
+          </div>
+
+          <h2 class="fs-5 fw-semibold text-white mb-2">{{ service.title }}</h2>
+          <p class="text-secondary small mb-4 lh-base">{{ service.desc }}</p>
+
+          <div class="mb-4">
+            <div class="font-mono text-muted small mb-2 text-uppercase" style="letter-spacing: 0.05em; font-size: 0.6875rem;">Scope & Deliverables</div>
+            <div class="d-flex flex-wrap gap-1">
+              <span class="font-mono py-1 px-2 rounded bg-dark text-secondary hairline-box" *ngFor="let f of service.features" style="font-size: 0.6875rem;">
+                {{ f }}
+              </span>
+            </div>
+          </div>
         </div>
+
+        <div class="pt-3 hairline-t d-flex justify-content-between align-items-center mt-2">
+          <span class="font-mono text-muted" style="font-size: 0.75rem;">Fixed / Sprint Retainer</span>
+          <a routerLink="/contact" class="btn-studio-secondary" style="padding: 6px 14px; font-size: 0.8125rem;">
+            <span>Discuss scope</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-us',
+  standalone: true,
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
